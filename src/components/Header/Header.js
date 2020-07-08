@@ -32,7 +32,7 @@ function Header(props) {
         <Grid container spacing={2} justify="center">
           <Grid item>
             <Button variant="contained" color="primary">
-              開始
+              Find Out More
             </Button>
           </Grid>
         </Grid>

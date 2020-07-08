@@ -7,11 +7,13 @@ import data from './static/data'
 
 // components
 import Header from './components/Header/Header'
+import About from './components/About/About'
 
 function App() {
   return (
     <div className="App">
       <Header data={data.main}/>
+      <About data={data.main}/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

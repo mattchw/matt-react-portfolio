@@ -1,0 +1,34 @@
+.about {
+  /* The image used */
+  /* background-image: url(../../assets/images/header-background.jpg); */
+
+  /* Full height */
+  height: 100vh; 
+  width: 100vw;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-container {
+  margin: 0 auto;
+}
+
+.about-img-circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #6F6F6F;
+  margin: auto;
+ }
+
+.about-img {
+  width: 200px;
+}
+

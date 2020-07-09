@@ -25,9 +25,6 @@ function Header(props) {
           <Typography variant="h6" align="center" color="textSecondary" paragraph>
             {props.data.description}
           </Typography>
-          <Typography variant="h6" align="center" color="textSecondary" paragraph>
-            {props.data.bio}
-          </Typography>
         </Grid>
         <Grid container spacing={2} justify="center">
           <Grid item>

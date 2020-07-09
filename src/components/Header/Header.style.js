@@ -5,7 +5,11 @@ export default makeStyles(theme => ({
     backgroundColor: '#282c34',
   },
   containerItem: {
-    paddingTop: '30vh',
+    margin: 0,
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
   },
   link: {
     textDecoration: 'none',

@@ -8,26 +8,16 @@ import data from './static/data'
 // components
 import Header from './components/Header/Header'
 import About from './components/About/About'
+import Resume from './components/Resume/Resume'
+import Projects from './components/Projects/Projects'
 
 function App() {
   return (
     <div className="App">
       <Header data={data.main}/>
       <About data={data.main}/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Resume data={data.resume}/>
+      <Projects data={data.portfolio}/>
     </div>
   );
 }

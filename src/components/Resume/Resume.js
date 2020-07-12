@@ -85,23 +85,6 @@ function Resume(props) {
 
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={9} container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                About me
-              </Typography>
-              <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                hi
-              </Typography>
-            </Grid>
-            <Grid item xs>
-              <Typography gutterBottom variant="subtitle1">
-                Code Skills
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
       </Grid>
     </Container>
   );

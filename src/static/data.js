@@ -133,16 +133,24 @@ const data = {
       ],
       "work":[
         {
+          "company":"Zensis Limited",
+          "title":"Backend Developer",
+          "years":"June 2020 – Present",
+          "description":[
+            "Perform system analysis, design and development with Java and Spring Framework and Oracle Database"
+            ]
+        },
+        {
           "company":"Varmeego Limited",
-          "title":"Software Development Consultant",
-          "years":"March 2020 – Present",
+          "title":"Java Programmer",
+          "years":"March 2020 – June 2020",
           "description":[
             "Perform system analysis, design and development with Java and Spring Framework and Oracle Database"
             ]
         },
         {
           "company":"Robert Bosch Co Ltd.",
-          "title":"Software Supplier Quality Intern",
+          "title":"Graduate Trainee - Software Supplier Quality",
           "years":"June 2019 – March 2020",
           "description":[
             "Develop and maintain quality documents for software supplier evaluation",

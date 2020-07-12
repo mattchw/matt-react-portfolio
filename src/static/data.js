@@ -39,14 +39,44 @@ const data = {
           "className":"fa fa-skype"
         }
       ],
+      "characteristics":[
+        {
+          "name":"Productive",
+          "icon": "fa fa-tachometer"
+        },
+        {
+          "name":"Fast Learner",
+          "icon": "fa fa-book"
+        },
+        {
+          "name":"Good Team Player",
+          "icon": "fa fa-users"
+        },
+        {
+          "name":"Passionate",
+          "icon": "fa fa-heart"
+        }
+      ],
       "skills":[
         {
-          "name":"HTML/CSS/JS",
+          "name":"HTML",
+          "level": 90
+        },
+        {
+          "name":"CSS",
           "level": 85
         },
         {
-          "name":"Java",
+          "name":"JS",
+          "level": 85
+        },
+        {
+          "name":"Nodejs",
           "level": 80
+        },
+        {
+          "name":"Java",
+          "level": 75
         },
         {
           "name":"Python",

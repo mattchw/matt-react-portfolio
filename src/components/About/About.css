@@ -1,15 +1,19 @@
 .about {
   /* The image used */
-  /* background-image: url(../../assets/images/header-background.jpg); */
+  background: #444444 url(../../static/images/background.png) no-repeat right top;
+  background-size: cover;
+
+  overflow: hidden;
 
   /* Full height */
-  height: 100vh; 
-  width: 100vw;
+  /* height: 100vh; 
+  width: 100vw; */
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  color: white;
 }
 
 .about-container {
@@ -18,8 +22,8 @@
 
 .about-img-circle {
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -30,5 +34,30 @@
 
 .about-img {
   width: 200px;
+}
+
+.about-skills {
+  width: 100%;
+}
+
+.about h3 {
+  color: #fff;
+  margin: 12px 0;
+  border-bottom: 3px solid #11ABB0;
+}
+
+.about-skills-text {
+  color: #fff;
+  margin: 12px 0;
+  padding: 5px 0;
+  border-bottom: 2px dotted #989898;
+}
+
+.about p {
+  font-size: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+   line-height: 30px;
+   color: #dcdcdc;
 }
 

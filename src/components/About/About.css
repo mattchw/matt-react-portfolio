@@ -22,8 +22,8 @@
 
 .about-img-circle {
   border-radius: 50%;
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -44,6 +44,7 @@
   color: #fff;
   margin: 12px 0;
   border-bottom: 3px solid #11ABB0;
+  padding-top: 10px;
 }
 
 .about-skills-text {
@@ -60,4 +61,6 @@
    line-height: 30px;
    color: #dcdcdc;
 }
+
+.icons a:hover, .icons a:focus { color: #11ABB0; }
 

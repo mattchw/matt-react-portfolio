@@ -67,7 +67,7 @@ function About(props) {
   return (
     <Container maxWidth='xl' className="about">
       <Grid item xs sm={10} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
-        <Grid item md={5}>
+        <Grid item md={5} style={{margin: 'auto 0'}}>
           <div className="about-img-circle">
             <img className="about-img" src='./images/profilepic1.jpg' alt={props.data.name} />
           </div>
@@ -93,7 +93,7 @@ function About(props) {
               {props.data.bio}
             </p>
           </Grid>
-          <Grid item container direction="row" justify="center" alignItems="center" xs={8} className="about-skills">
+          <Grid item container direction="row" justify="center" alignItems="center" xs={10} className="about-skills">
             <h4 className="about-skills-text">
             <span><FontAwesomeIcon style={{marginRight: 10}} icon={faCode} />Code Skills</span>
             </h4>

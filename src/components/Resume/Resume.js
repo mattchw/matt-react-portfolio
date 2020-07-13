@@ -25,8 +25,8 @@ function Resume(props) {
     var eduDescription = education.description.map(function (description, index) {
       return <p className="description" key={index}>• {description}</p>
     })
-    return <div key={index} className="item"><h3>{education.school}</h3>
-      <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
+    return <div key={index} className="item"><h3 className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.school}</h3>
+      <p className="info" className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
       {eduDescription}
       {
         (index !== educationLen - 1) ? <hr /> : null
@@ -39,8 +39,8 @@ function Resume(props) {
     var workDescription = work.description.map(function (description, index) {
       return <p className="description" key={index}>• {description}</p>
     })
-    return <div key={work.company} className="item"><h3>{work.company}</h3>
-      <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+    return <div key={work.company} className="item"><h3 className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.company}</h3>
+      <p className="info" className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
       {workDescription}
       {
         (index !== workLen - 1) ? <hr /> : null

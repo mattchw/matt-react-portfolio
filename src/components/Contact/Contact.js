@@ -28,14 +28,14 @@ function Contact(props) {
 
   return (
     <Container id="contact" maxWidth='xl' className="footer">
-      <Grid item xs sm={8} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
+      <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid item>
           <h1>Contact</h1>
         </Grid>
         <Grid item container >
           <div className="card">
             <Grid className="additional" style={{ margin: "auto 0" }}>
-              <Grid style={{ margin: "auto" }}>
+              <Grid style={{ margin: "auto", padding: 10 }}>
                 <img src="images/logos/logo4.png" alt="logo" style={{ width: 30 }} />
                 <div style={{ margin: "auto" }} className="circle">
                   <img src={profilepic} alt={name} />
@@ -56,7 +56,7 @@ function Contact(props) {
                     <FontAwesomeIcon style={{ margin: "0 5" }} icon={faMapMarkerAlt} />
                     {city}
                   </span><br />
-                  <Button variant="email" href={"mailto:" + email}>
+                  <Button href={"mailto:" + email}>
                     <FontAwesomeIcon style={{ margin: "0 5" }} icon={faEnvelope} />
                     {email}
                   </Button>
@@ -68,7 +68,7 @@ function Contact(props) {
             </Grid>
           </div>
         </Grid>
-        <Grid item>
+        <Grid item style={{paddingTop: 50}}>
           <hr />
           <ul className="copyright">
             <li>Copyright &copy; Matthew Wong {(new Date().getFullYear())}</li>

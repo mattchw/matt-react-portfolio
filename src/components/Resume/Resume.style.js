@@ -21,4 +21,7 @@ export default makeStyles(theme => ({
 	resumeRightInfo: {
 		textAlign: 'left',
 	},
+	resumeRightInfoName: {
+		textAlign: 'center'
+	}
 }));

@@ -11,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
+import Fade from 'react-reveal/Fade';
+
 const useStyles = styles;
 
 function Contact(props) {
@@ -32,7 +34,9 @@ function Contact(props) {
         <Grid item>
           <h1>Contact</h1>
         </Grid>
+        <Fade top cascade>
         <Grid item container >
+          
           <div className="card">
             <Grid className="additional" style={{ margin: "auto 0" }}>
               <Grid style={{ margin: "auto", padding: 10 }}>
@@ -68,6 +72,7 @@ function Contact(props) {
             </Grid>
           </div>
         </Grid>
+        </Fade>
         <Grid item style={{paddingTop: 50}}>
           <hr />
           <ul className="copyright">

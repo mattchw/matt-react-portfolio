@@ -8,6 +8,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+import Fade from 'react-reveal/Fade';
+
 const useStyles = styles;
 
 function Projects(props) {
@@ -17,6 +19,7 @@ function Projects(props) {
     var projects = props.data.projects.map(function (projects) {
       var projectImage = 'images/portfolio/' + projects.image;
       return <Grid item md={4} key={projects.title} style={{padding: 10}}>
+        
         <div className="container">
         <a href={projects.url} title={projects.title}>
           <img src={projectImage} alt={projects.title} className="image" />
@@ -27,6 +30,7 @@ function Projects(props) {
             </div>
             </a>
         </div>
+        
       </Grid>
     })
   }
@@ -38,12 +42,11 @@ function Projects(props) {
         <Grid item>
           <h1>Some of My Recent Works</h1>
         </Grid>
+        <Fade bottom cascade>
         <Grid item container direction="row" justify="center" alignItems="center">
           {projects}
         </Grid>
-        <Grid item>
-        
-        </Grid>
+        </Fade>
       </Grid>
     </Container>
   );

@@ -12,6 +12,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+import Fade from 'react-reveal/Fade';
+
 const useStyles = styles;
 
 function Resume(props) {
@@ -53,28 +55,36 @@ function Resume(props) {
     <Container maxWidth='xl'>
       <Grid item xs sm={10} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item sm={3}>
+        <Fade bottom cascade>
           <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
           <span><FontAwesomeIcon style={{marginRight: 10}} icon={faUniversity} />Education</span>
           </h3>
+          </Fade>
         </Grid>
         <Grid item xs={12} sm={9} container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs className={classes.resumeRightInfo}>
+              <Fade bottom cascade>
               {education}
+              </Fade>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       <Grid item xs sm={10} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item sm={3}>
+        <Fade bottom cascade>
           <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
           <span><FontAwesomeIcon style={{marginRight: 10}} icon={faBriefcase} />Work</span>
           </h3>
+          </Fade>
         </Grid>
         <Grid item xs={12} sm={9} container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs className={classes.resumeRightInfo}>
+            <Fade bottom cascade>
               {work}
+              </Fade>
             </Grid>
           </Grid>
         </Grid>

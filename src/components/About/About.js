@@ -38,14 +38,14 @@ function About(props) {
   const skills = props.data.skills.map((skill, index) => {
     return <Grid key={index} container direction="row" justify="center" alignItems="center" className={classes.skillItem}>
         <Grid item xs={3}>
-        <Slide left cascade>
-          <Typography gutterleft variant="subtitle2">
+        <Slide bottom cascade>
+          <Typography variant="subtitle2">
             {skill.name}
           </Typography>
           </Slide>
         </Grid>
         <Grid item xs={8}>
-        <Slide left cascade>
+        <Slide bottom cascade>
           <BorderLinearProgress variant="determinate" value={skill.level} />
           </Slide>
         </Grid>
@@ -75,13 +75,13 @@ function About(props) {
     <Container maxWidth='xl' className="about">
       <Grid item xs sm={10} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item md={5} style={{ margin: 'auto 0' }}>
-          <Slide left>
+          <Slide bottom>
             <div className="about-img-circle">
               <img className="about-img" src='./images/profilepic1.jpg' alt={props.data.name} />
             </div>
           </Slide>
           <Hidden smDown>
-            <Slide left>
+            <Slide bottom>
               <Grid container direction="row" justify="center" alignItems="center" style={{ paddingTop: 50 }}>
                 {characteristics6}
               </Grid>
@@ -89,7 +89,7 @@ function About(props) {
           </Hidden>
         </Grid>
         <Grid item md={7} container direction="column" justify="center" alignItems="center" >
-          <Slide left cascade>
+          <Slide bottom cascade>
             <Grid item>
               <h3>
                 About me
@@ -97,13 +97,13 @@ function About(props) {
             </Grid>
           </Slide>
           <Hidden mdUp>
-            <Slide left cascade>
+            <Slide bottom cascade>
               <Grid container direction="row" justify="center" alignItems="center" style={{ paddingTop: 30 }}>
                 {characteristics3}
               </Grid>
             </Slide>
           </Hidden>
-          <Slide left cascade>
+          <Slide bottom cascade>
             <Grid item>
               <p>
                 {props.data.bio}
@@ -111,7 +111,7 @@ function About(props) {
             </Grid>
           </Slide>
           <Grid item container direction="row" justify="center" alignItems="center" xs={10} className="about-skills">
-            <Slide left cascade>
+            <Slide bottom cascade>
               <h4 className="about-skills-text">
                 <span><FontAwesomeIcon style={{ marginRight: 10 }} icon={faCode} />Code Skills</span>
               </h4>

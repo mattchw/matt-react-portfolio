@@ -18,20 +18,18 @@ function Projects(props) {
   if (props.data) {
     var projects = props.data.projects.map(function (projects) {
       var projectImage = 'images/portfolio/' + projects.image;
-      return <Grid item md={4} key={projects.title} style={{padding: 10}}>
-        
-        <div className="container">
-        <a href={projects.url} title={projects.title}>
-          <img src={projectImage} alt={projects.title} className="image" />
-            <div className="overlay">
-              <div className="text"><h3 className="content-title">{projects.title}</h3>
-              <hr />
-              <p className="content-text">{projects.category}</p></div>
-            </div>
+      return<Grid item md={4} key={projects.title} style={{ padding: 10}}>         
+          <div className="container">
+            <a href={projects.url} title={projects.title}>
+              <img src={projectImage} alt={projects.title} className="image" />
+              <div className="overlay">
+                <div className="text"><h3 className="content-title">{projects.title}</h3>
+                  <hr />
+                  <p className="content-text">{projects.category}</p></div>
+              </div>
             </a>
-        </div>
-        
-      </Grid>
+          </div>         
+        </Grid>      
     })
   }
 
@@ -40,13 +38,14 @@ function Projects(props) {
     <Container maxWidth='xl' className="project">
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid item>
+          <Fade bottom cascade>
           <h1>Some of My Recent Works</h1>
+          </Fade>
         </Grid>
-        <Fade bottom cascade>
+
         <Grid item container direction="row" justify="center" alignItems="center">
           {projects}
         </Grid>
-        </Fade>
       </Grid>
     </Container>
   );

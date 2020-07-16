@@ -18,12 +18,12 @@ const useStyles = styles;
 function Contact(props) {
   const classes = useStyles();
 
-  if(props.data){
+  if (props.data) {
     var name = props.data.name;
-    var profilepic= "images/"+props.data.image2;
+    var profilepic = "images/" + props.data.image2;
     var city = props.data.address.city;
     var email = props.data.email;
-    var networks= props.data.social.map(function(network){
+    var networks = props.data.social.map(function (network) {
       return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
     })
   }
@@ -34,46 +34,45 @@ function Contact(props) {
         <Grid item>
           <h1>Contact</h1>
         </Grid>
-        <Fade top cascade>
-        <Grid item container >
-          
-          <div className="card">
-            <Grid className="additional" style={{ margin: "auto 0" }}>
-              <Grid style={{ margin: "auto", padding: 10 }}>
-                <img src="images/logos/logo4.png" alt="logo" style={{ width: 30 }} />
-                <div style={{ margin: "auto" }} className="circle">
-                  <img src={profilepic} alt={name} />
-                </div>
+        <Fade bottom cascade>
+          <Grid item container >
+            <div className="card">
+              <Grid className="additional" style={{ margin: "auto 0" }}>
+                <Grid style={{ margin: "auto", padding: 10 }}>
+                  <img src="images/logos/logo4.png" alt="logo" style={{ width: 30 }} />
+                  <div style={{ margin: "auto" }} className="circle">
+                    <img src={profilepic} alt={name} />
+                  </div>
 
-                <div className="cardName">
-                  <FontAwesomeIcon style={{ margin: "0 5" }} icon={faUser} />
-                  <span>{name}</span>
-                </div>
+                  <div className="cardName">
+                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faUser} />
+                    <span>{name}</span>
+                  </div>
+
+                </Grid>
 
               </Grid>
-
-            </Grid>
-            <Grid className="general">
-              <Grid>
-                <p className="address">
-                  <span>
-                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faMapMarkerAlt} />
-                    {city}
-                  </span><br />
-                  <Button href={"mailto:" + email}>
-                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faEnvelope} />
-                    {email}
-                  </Button>
-                </p>
-                <ul className="social-links more">
-                  {networks}
-                </ul>
+              <Grid className="general">
+                <Grid className={classes.smallFont}>
+                  <p className="address">
+                    <span>
+                      <FontAwesomeIcon style={{ margin: "0 5" }} icon={faMapMarkerAlt} />
+                      {city}
+                    </span><br />
+                    <Button size="small" href={"mailto:" + email} className={classes.smallFont}>
+                      <FontAwesomeIcon style={{ margin: "0 5" }} icon={faEnvelope} />
+                      {email}
+                    </Button>
+                  </p>
+                  <ul className="social-links more">
+                    {networks}
+                  </ul>
+                </Grid>
               </Grid>
-            </Grid>
-          </div>
-        </Grid>
+            </div>
+          </Grid>
         </Fade>
-        <Grid item style={{paddingTop: 50}}>
+        <Grid item style={{ paddingTop: 50 }}>
           <hr />
           <ul className="copyright">
             <li>Copyright &copy; Matthew Wong {(new Date().getFullYear())}</li>

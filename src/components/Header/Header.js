@@ -26,14 +26,15 @@ function Header(props) {
             {props.data.description}
           </Typography>
         </Grid>
-        <Grid container spacing={2} justify="center">
+        
+      </Grid>
+      <Grid container justify="center" className={classes.button}>
           <Grid item>
             <Button variant="contained" color="primary">
               Find Out More
             </Button>
           </Grid>
         </Grid>
-      </Grid>
     </Container>
   );
 }

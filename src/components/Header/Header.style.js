@@ -11,7 +11,11 @@ export default makeStyles(theme => ({
     left: '50%',
     transform: 'translate(-50%, -50%)'
   },
-  link: {
-    textDecoration: 'none',
+  button: {
+    margin: 0,
+    position: 'absolute',
+    top: '95%',
+    left: '50%',
+    transform: 'translate(-50%, -95%)'
   }
 }));

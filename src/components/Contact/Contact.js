@@ -10,6 +10,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import Fade from 'react-reveal/Fade';
 
@@ -31,6 +33,13 @@ function Contact(props) {
   return (
     <Container id="contact" maxWidth='xl' className="footer">
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
+      <Grid container justify="center" style={{margin: 10}}>
+        <Grid item>
+          <IconButton aria-label="find out more">
+            <KeyboardArrowUpIcon fontSize="large"/>
+          </IconButton>
+        </Grid>
+      </Grid>
         <Grid item>
           <h1>Contact</h1>
         </Grid>

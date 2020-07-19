@@ -3,6 +3,7 @@ import './Header.css'
 
 import styles from './Header.style'
 
+import Typist from 'react-typist';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -10,31 +11,35 @@ import Container from '@material-ui/core/Container';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
+import { Link } from 'react-scroll';
+
 const useStyles = styles;
 
 function Header(props) {
   const classes = useStyles();
 
   return (
-    <Container maxWidth='xl' className="header">
+    <Container maxWidth='xl' className="header" id="header">
       <Grid container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid item>
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            {props.data.name}
-          </Typography>
+          <Typist className="responsive-headline" avgTypingDelay={150}>
+            Hi, I'm <Typist.Delay ms={700} />{props.data.name}.
+            </Typist>
         </Grid>
+        <hr />
         <Grid item xs={8}>
-          <Typography variant="h6" align="center" color="textSecondary" paragraph>
+          <p>
             {props.data.description}
-          </Typography>
+          </p>
         </Grid>
-
       </Grid>
       <Grid container justify="center" className={classes.button}>
         <Grid item>
-          <IconButton aria-label="find out more">
-            <KeyboardArrowDownIcon fontSize="large"/>
-          </IconButton>
+          <Link to="about" spy={true} smooth={true} duration={1000}>
+            <IconButton aria-label="find out more" style={{ color: 'white' }}>
+              <KeyboardArrowDownIcon fontSize="large" />
+            </IconButton>
+          </Link>
         </Grid>
       </Grid>
     </Container>

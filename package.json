@@ -13,10 +13,12 @@
     "@testing-library/user-event": "^7.2.1",
     "font-awesome": "^4.7.0",
     "react": "^16.13.1",
-    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.13.1",
     "react-reveal": "^1.2.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^3.4.1",
+    "react-scroll": "^1.8.0",
+    "react-typist": "^2.0.5",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",

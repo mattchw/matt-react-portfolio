@@ -13,6 +13,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
+import { Link } from 'react-scroll';
+
 import Fade from 'react-reveal/Fade';
 
 const useStyles = styles;
@@ -33,13 +35,15 @@ function Contact(props) {
   return (
     <Container id="contact" maxWidth='xl' className="footer">
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
-      <Grid container justify="center" style={{margin: 10}}>
-        <Grid item>
-          <IconButton aria-label="find out more">
-            <KeyboardArrowUpIcon fontSize="large"/>
-          </IconButton>
+        <Grid container justify="center" style={{ margin: 10 }}>
+          <Grid item>
+            <Link to="header" spy={true} smooth={true} duration={1000}>
+              <IconButton aria-label="find out more">
+                <KeyboardArrowUpIcon fontSize="large" />
+              </IconButton>
+            </Link>
+          </Grid>
         </Grid>
-      </Grid>
         <Grid item>
           <h1>Contact</h1>
         </Grid>

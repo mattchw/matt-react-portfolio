@@ -20,9 +20,10 @@
 }
 
 .header_link {
-  padding: 20px;
+  padding: 15px;
   color: #ffffff;
   font-weight: bold;
+  font-size: 12px;
   border: none;
   border-bottom: 3px solid transparent;
   cursor: pointer;
@@ -31,7 +32,100 @@
   transition: color 0.3s linear;
 }
 
-.selected {
-  border-bottom: 3px solid #11ABB0;
-  color: #11ABB0;
+@media only screen and (min-width: 0px) {
+  .selected {
+    border-left: 3px solid #11ABB0;
+    color: #11ABB0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .selected {
+    border-left: 3px solid #11ABB0;
+    color: #11ABB0;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .selected {
+    border-left: 0px;
+    border-bottom: 3px solid #11ABB0;
+    color: #11ABB0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .selected {
+    border-left: 0px;
+    border-bottom: 3px solid #11ABB0;
+    color: #11ABB0;
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 25px;
+  right: 30px;
+  top: 30px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #333333;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #1d1d1d;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  background-color: white;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: red;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #333333;
+  padding: 2em 1em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #333333;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

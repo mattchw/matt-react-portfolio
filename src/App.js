@@ -11,6 +11,9 @@ import Resume from './components/Resume/Resume'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 
+import { stack as Menu } from 'react-burger-menu'
+import Hidden from '@material-ui/core/Hidden';
+
 const getDimensions = ele => {
   const { height } = ele.getBoundingClientRect();
   const offsetTop = ele.offsetTop;
@@ -32,6 +35,7 @@ const scrollTo = ele => {
 
 function App() {
   const [visibleSection, setVisibleSection] = useState("Home");
+  const [mobileNav, setMobileNav] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
   const headerRef = useRef(null);
@@ -67,7 +71,7 @@ function App() {
         setVisibleSection(undefined);
       }
 
-      if (visibleSection === "About" || visibleSection === "Resume" || visibleSection === "Projects" || visibleSection === "Contact"){
+      if (visibleSection === "About" || visibleSection === "Resume" || visibleSection === "Projects" || visibleSection === "Contact") {
         setShowNav(true);
       } else {
         setShowNav(false);
@@ -83,54 +87,110 @@ function App() {
 
   return (
     <div className="App">
-      <div className={`sticky ${showNav ? "show" : "hide"}`}>
-        <button
-          type="button"
-          className={`header_link`}
-          onClick={() => {
-            scrollTo(headerRef.current);
-          }}
-        >
-          Home
+      <Hidden smDown>
+        <div className={`sticky ${showNav ? "show" : "hide"}`}>
+          <button
+            type="button"
+            className={`header_link`}
+            onClick={() => {
+              scrollTo(headerRef.current);
+            }}
+          >
+            Home
             </button>
-        <button
-          type="button"
-          className={`header_link ${visibleSection === "About" ? "selected" : ""}`}
-          onClick={() => {
-            scrollTo(aboutRef.current);
-          }}
-        >
-          About
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "About" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(aboutRef.current);
+            }}
+          >
+            About
             </button>
-        <button
-          type="button"
-          className={`header_link ${visibleSection === "Resume" ? "selected" : ""}`}
-          onClick={() => {
-            scrollTo(resumeRef.current);
-          }}
-        >
-          Resume
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Resume" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(resumeRef.current);
+            }}
+          >
+            Resume
             </button>
-        <button
-          type="button"
-          className={`header_link ${visibleSection === "Projects" ? "selected" : ""}`}
-          onClick={() => {
-            scrollTo(projectsRef.current);
-          }}
-        >
-          Projects
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Projects" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(projectsRef.current);
+            }}
+          >
+            Projects
             </button>
-        <button
-          type="button"
-          className={`header_link ${visibleSection === "Contact" ? "selected" : ""}`}
-          onClick={() => {
-            scrollTo(contactRef.current);
-          }}
-        >
-          Contact
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Contact" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(contactRef.current);
+            }}
+          >
+            Contact
             </button>
-      </div>
-      <div id="Header" ref={headerRef} style={{top: -60}}>
+        </div>
+      </Hidden>
+      <Hidden mdUp>
+        <Menu right width={150} customCrossIcon={false}>
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Home" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(headerRef.current);
+              setMobileNav(false);
+            }}
+          >
+            Home
+            </button>
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "About" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(aboutRef.current);
+              setMobileNav(false);
+            }}
+          >
+            About
+            </button>
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Resume" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(resumeRef.current);
+              setMobileNav(false);
+            }}
+          >
+            Resume
+            </button>
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Projects" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(projectsRef.current);
+              setMobileNav(false);
+            }}
+          >
+            Projects
+            </button>
+          <button
+            type="button"
+            className={`header_link ${visibleSection === "Contact" ? "selected" : ""}`}
+            onClick={() => {
+              scrollTo(contactRef.current);
+              setMobileNav(false);
+            }}
+          >
+            Contact
+            </button>
+        </Menu>
+      </Hidden>
+      <div id="Header" ref={headerRef}>
         <Header data={data.main} />
       </div>
       <div id="About" ref={aboutRef}>

@@ -35,7 +35,7 @@ function Contact(props) {
   return (
     <Container id="contact" maxWidth='xl' className="footer">
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
-        <Grid container justify="center" style={{ margin: 10 }}>
+        <Grid container justify="center">
           <Grid item>
             <Link to="header" spy={true} smooth={true} duration={1000}>
               <IconButton aria-label="find out more">

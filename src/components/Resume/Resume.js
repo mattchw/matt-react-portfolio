@@ -50,22 +50,64 @@ function Resume(props) {
     </div>
   })
 
+  var front = props.data.techs.front.map(function (techs) {
+    return <Grid container direction="row" key={techs.name}>
+      <Grid item xs={3}>
+        <img src={techs.img} />
+        </Grid>
+        <Grid item xs={9}>
+        {techs.description}
+        </Grid>
+      </Grid>
+  })
+  var back = props.data.techs.back.map(function (techs) {
+    return <Grid container direction="row" key={techs.name}>
+      <Grid item xs={3}>
+        <img src={techs.img} />
+        </Grid>
+        <Grid item xs={9}>
+        {techs.description}
+        </Grid>
+      </Grid>
+  })
+
+  // var back = props.data.techs.back.map(function (techs) {
+  //   return <Card key={techs.name} className="card">
+  //     <Container style={{ padding: 0 }}>
+  //       <Row className="justify-content-center">
+  //         <Col style={{ padding: 0 }} sm={3}>
+  //           <Card.Img style={{ maxWidth: 125, margin: '0 auto' }} variant="top" src={techs.img} />
+  //         </Col>
+  //         <Col style={{ padding: 0 }} sm={8} className="cardInfo">
+  //           <Card.Body>
+  //             <Card.Title style={{ fontSize: 15 }}><FontAwesomeIcon style={{ margin: "0 5" }} icon={faCode} />{techs.name}</Card.Title>
+  //             <Card.Text style={{ textAlign: 'left', fontSize: 12 }}>
+  //               {techs.description}
+  //             </Card.Text>
+  //           </Card.Body>
+  //         </Col>
+  //       </Row>
+  //     </Container>
+  //   </Card>
+  // })
+  // }
+
 
   return (
     <Container maxWidth='xl'>
       <Grid item xs sm={10} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item sm={3}>
-        <Fade bottom cascade>
-          <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
-          <span><FontAwesomeIcon style={{marginRight: 10}} icon={faUniversity} />Education</span>
-          </h3>
+          <Fade bottom cascade>
+            <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
+              <span><FontAwesomeIcon style={{ marginRight: 10 }} icon={faUniversity} />Education</span>
+            </h3>
           </Fade>
         </Grid>
         <Grid item xs={12} sm={9} container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs className={classes.resumeRightInfo}>
               <Fade bottom cascade>
-              {education}
+                {education}
               </Fade>
             </Grid>
           </Grid>
@@ -73,17 +115,17 @@ function Resume(props) {
       </Grid>
       <Grid item xs sm={10} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item sm={3}>
-        <Fade bottom cascade>
-          <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
-          <span><FontAwesomeIcon style={{marginRight: 10}} icon={faBriefcase} />Work</span>
-          </h3>
+          <Fade bottom cascade>
+            <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
+              <span><FontAwesomeIcon style={{ marginRight: 10 }} icon={faBriefcase} />Work</span>
+            </h3>
           </Fade>
         </Grid>
         <Grid item xs={12} sm={9} container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs className={classes.resumeRightInfo}>
-            <Fade bottom cascade>
-              {work}
+              <Fade bottom cascade>
+                {work}
               </Fade>
             </Grid>
           </Grid>
@@ -91,9 +133,19 @@ function Resume(props) {
       </Grid>
       <Grid item xs sm={10} container direction="row" className={classes.containerItem}>
         <Grid item sm={3}>
-          <Typography variant="h6" align="center" color="textSecondary" paragraph>
-
-          </Typography>
+          <h3 className={smMedia ? classes.resumeLeftTitle : classes.resumeLeftTitleSM}>
+            <span><FontAwesomeIcon style={{ marginRight: 10 }} icon={faLaptopCode} />Techs</span>
+          </h3>
+        </Grid>
+        <Grid item xs={12} sm={9} container>
+          <Grid item xs container direction="column" spacing={2}>
+            <Grid item xs className={classes.resumeRightInfo}>
+                {front}
+            </Grid>
+            <Grid item xs className={classes.resumeRightInfo}>
+                {back}
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Container>

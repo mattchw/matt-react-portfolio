@@ -67,13 +67,15 @@
   position: fixed;
   width: 30px;
   height: 25px;
-  right: 30px;
-  top: 30px;
+  right: 5%;
+  border: 10px solid #0c9498;
+  background-color: #0c9498;
+  transition: top 1s;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #333333;
+  background: white;
 }
 
 /* Color/shape of burger icon bars on hover*/

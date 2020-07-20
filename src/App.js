@@ -52,6 +52,14 @@ function App() {
     { section: "Contact", ref: contactRef },
   ];
 
+  const closeMenu = () => {
+    setMobileNav(false);
+  }
+
+  const isMenuOpen = (state) => {
+    setMobileNav(state.isOpen);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const { height: headerHeight } = getDimensions(headerRef.current);
@@ -137,13 +145,13 @@ function App() {
         </div>
       </Hidden>
       <Hidden mdUp>
-        <Menu right width={150} customCrossIcon={false}>
+        <Menu burgerButtonClassName={`${showNav ? "show" : "hide"}`} right width={150} customCrossIcon={false} isOpen={mobileNav} onStateChange={isMenuOpen}>
           <button
             type="button"
             className={`header_link ${visibleSection === "Home" ? "selected" : ""}`}
             onClick={() => {
               scrollTo(headerRef.current);
-              setMobileNav(false);
+              closeMenu();
             }}
           >
             Home
@@ -153,7 +161,7 @@ function App() {
             className={`header_link ${visibleSection === "About" ? "selected" : ""}`}
             onClick={() => {
               scrollTo(aboutRef.current);
-              setMobileNav(false);
+              closeMenu();
             }}
           >
             About
@@ -163,7 +171,7 @@ function App() {
             className={`header_link ${visibleSection === "Resume" ? "selected" : ""}`}
             onClick={() => {
               scrollTo(resumeRef.current);
-              setMobileNav(false);
+              closeMenu();
             }}
           >
             Resume
@@ -173,7 +181,7 @@ function App() {
             className={`header_link ${visibleSection === "Projects" ? "selected" : ""}`}
             onClick={() => {
               scrollTo(projectsRef.current);
-              setMobileNav(false);
+              closeMenu();
             }}
           >
             Projects
@@ -183,12 +191,13 @@ function App() {
             className={`header_link ${visibleSection === "Contact" ? "selected" : ""}`}
             onClick={() => {
               scrollTo(contactRef.current);
-              setMobileNav(false);
+              closeMenu();
             }}
           >
             Contact
             </button>
         </Menu>
+
       </Hidden>
       <div id="Header" ref={headerRef}>
         <Header data={data.main} />

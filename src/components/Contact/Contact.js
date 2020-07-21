@@ -87,7 +87,7 @@ function Contact(props) {
         </Fade>
         <Grid item style={{ paddingTop: 50 }}>
           <hr />
-          <ul className="copyright">
+          <ul className="copyright" style={{ paddingTop: 20 }}>
             <li>Copyright &copy; Matthew Wong {(new Date().getFullYear())}</li>
           </ul>
         </Grid>

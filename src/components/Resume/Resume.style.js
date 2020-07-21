@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(theme => ({
 	containerItem: {
-    paddingTop: 50,
+		paddingTop: 50,
+		paddingBottom: 50,
     margin: '0 auto'
 	},
 	skillItem: {
@@ -23,5 +24,5 @@ export default makeStyles(theme => ({
 	},
 	resumeRightInfoName: {
 		textAlign: 'center'
-	}
+	},
 }));

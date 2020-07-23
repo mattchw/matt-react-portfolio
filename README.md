@@ -15,15 +15,15 @@ This is my personal website built with React, using React Hook.
 
 ### Make you own personal website
 
-###1. Fill in the content with your personal data
-Open `src/static/data.js` and replace the data with your personal information.
+1. Fill in the content with your personal data
+  1. Open `src/static/data.js` and replace the data with your personal information.
 
-###2. Replace the images
-Go to `src/static/images` and put your own images into this directory.
-Make sure the names of your images are the same as the names inside `src/static/data.js`.
+1. Replace the images
+  1. Go to `src/static/images` and put your own images into this directory.
+  1. Make sure the names of your images are the same as the names inside `src/static/data.js`.
 
-###3. Of course. You can change the style of the website
+1. Of course. You can change the style of the website
 
-###4. Run your own personal website
-Open Terminal on your computer and run `npm install` and `npm start` in the project directory. Enjoy!
+1. Run your own personal website
+  1. Open Terminal on your computer and run `npm install` and `npm start` in the project directory. Enjoy!
 

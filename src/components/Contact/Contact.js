@@ -2,12 +2,10 @@ import React from 'react';
 import './Contact.css'
 
 import styles from './Contact.style'
-import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMapMarkerAlt, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
@@ -24,7 +22,8 @@ function Contact(props) {
 
   if (props.data) {
     var name = props.data.name;
-    var profilepic = "images/" + props.data.image2;
+    var profilepic = require('../../static/images/profilepic/'+ props.data.secondaryImg)
+    var logo = require('../../static/images/logo/'+ props.data.logo)
     var city = props.data.address.city;
     var email = props.data.email;
     var networks = props.data.social.map(function (network) {
@@ -52,7 +51,7 @@ function Contact(props) {
             <div className="card">
               <Grid className="additional" style={{ margin: "auto 0" }}>
                 <Grid style={{ margin: "auto", padding: 10 }}>
-                  <img src="images/logos/logo4.png" alt="logo" style={{ width: 30 }} />
+                  <img src={logo} alt="logo" style={{ width: 30 }} />
                   <div style={{ margin: "auto" }} className="circle">
                     <img src={profilepic} alt={name} />
                   </div>

@@ -2,10 +2,8 @@ import React from 'react';
 import './Projects.css'
 
 import styles from './Projects.style'
-import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 import Fade from 'react-reveal/Fade';
@@ -17,7 +15,7 @@ function Projects(props) {
 
   if (props.data) {
     var projects = props.data.projects.map(function (projects) {
-      var projectImage = 'images/portfolio/' + projects.image;
+      var projectImage = require('../../static/images/projects/'+ projects.image);
       return<Grid item sm={6} md={4} key={projects.title} style={{ padding: 10}}>         
           <div className="container">
             <a href={projects.url} title={projects.title}>

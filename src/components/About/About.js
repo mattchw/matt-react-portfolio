@@ -3,7 +3,7 @@ import './About.css'
 import 'font-awesome/css/font-awesome.min.css';
 
 import styles from './About.style'
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import Icon from '@material-ui/core/Icon';
@@ -34,6 +34,8 @@ const BorderLinearProgress = withStyles((theme) => ({
 
 function About(props) {
   const classes = useStyles();
+
+  const profilepic = require('../../static/images/profilepic/'+ props.data.primaryImg);
 
   const skills = props.data.skills.map((skill, index) => {
     return <Grid key={index} container direction="row" justify="center" alignItems="center" className={classes.skillItem}>
@@ -77,7 +79,7 @@ function About(props) {
         <Grid item md={5} style={{ margin: 'auto 0' }}>
           <Slide bottom>
             <div className="about-img-circle">
-              <img className="about-img" src='./images/profilepic1.jpg' alt={props.data.name} />
+              <img className="about-img" src={profilepic} alt={props.data.name} />
             </div>
           </Slide>
           <Hidden smDown>

@@ -62,7 +62,6 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const { height: headerHeight } = getDimensions(headerRef.current);
       const scrollPosition = window.scrollY + 50;
 
       const selected = sectionRefs.find(({ section, ref }) => {
@@ -71,6 +70,7 @@ function App() {
           const { offsetBottom, offsetTop } = getDimensions(ele);
           return scrollPosition > offsetTop && scrollPosition < offsetBottom;
         }
+        return null;
       });
 
       if (selected && selected.section !== visibleSection) {
@@ -91,7 +91,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [visibleSection]);
+  }, [visibleSection, sectionRefs]);
 
   return (
     <div className="App">

@@ -1,12 +1,19 @@
 const data = {
     "main": {
       "name":"Matt Wong",
-      "occupation":"(Your Occupation Here)",
-      "description":"Computer Science Fresh Graduate based in HK",
-      "image":"profilepic1.jpg",
-      "image2":"profilepic.png",
+      "occupation":"Backend Developer",
+      // header description
+      "description":"Backend Developer based in HK",
+      // logo displayed in contact section
+      "logo": "logo.png",
+      // primary profile picture displayed in about section
+      "primaryImg":"profilepic-about.jpg",
+      // secondary profile picture displayed in contact section
+      "secondaryImg":"profilepic-contact.png",
+      // bio in about
       "bio":"Being an enthusiastc Computer Science graduate with an internship experience at Robert Bosch Co. Ltd., I am looking for a full-time software engineer position to utilize my logical thinking skills and programming knowledge to provide with outstanding software solutions.",
-      "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+      "contactmessage":"Here is the contact details so that you can get in contact with me.",
+      // display in contact
       "email": "matthew.chohin@gmail.com",
       "phone": "555-555-5555",
       "address":{
@@ -15,8 +22,8 @@ const data = {
         "state":"HK SAR",
         "zip": "(Your Zip/Postal Code)"
       },
-      "website": "http://www.timbakerdev.com",
-      "resumedownload":"http://timbakerdev.com",
+      "website": "",
+      // social network
       "social":[
         {
           "name":"twitter",
@@ -39,6 +46,7 @@ const data = {
           "className":"fa fa-skype"
         }
       ],
+      // in about section
       "characteristics":[
         {
           "name":"Productive",
@@ -57,6 +65,7 @@ const data = {
           "icon": "fa fa-heart"
         }
       ],
+      // in about section
       "skills":[
         {
           "name":"HTML",
@@ -86,32 +95,9 @@ const data = {
           "name":"Swift",
           "level": 75
         },
-        {
-          "name":"C/C++",
-          "level": 60
-        }
       ],
-      "languages":[
-        {
-          "name":"Cantonese",
-          "level": 100
-        },
-        {
-          "name":"English",
-          "level": 80
-        },
-        {
-          "name":"Mandarin",
-          "level": 75
-        },
-        {
-          "name":"German",
-          "level": 20
-        }
-      ]
     },
     "resume":{
-      "skillmessage":"Here are my favourite library/framework/tools for frontend and backend development",
       "education":[
         {
           "school":"The Chinese University of Hong Kong",
@@ -119,7 +105,7 @@ const data = {
           "graduated":"September 2015 – July 2019",
           "description":[
             "Specialized in networks, cloud, database, web and mobile applications development",
-            "Developed two educational applications in final year project with Java, Spring.io, Swift, React Native, Javascript"
+            "Developed two educational applications in final year project with Spring.io, Swift, React Native, Javascript"
             ]
         },
         {
@@ -137,7 +123,7 @@ const data = {
           "title":"Backend Developer",
           "years":"June 2020 – Present",
           "description":[
-            "Perform system analysis, design and development with Java and Spring Framework and Oracle Database"
+            "Rebuild the real estate and property system with Nodejs, Redis, Oracle Database, ElasticSearch and deploy it on AWS EC2",
             ]
         },
         {
@@ -145,7 +131,8 @@ const data = {
           "title":"Java Programmer",
           "years":"March 2020 – June 2020",
           "description":[
-            "Perform system analysis, design and development with Java and Spring Framework and Oracle Database"
+            "Performed system analysis, design and development with Java, Spring, SAP e-commerce Hybris framework and Oracle Database",
+            "Came up with data migration strategy and execution plan to migrate data from Hybris platform to revamped e-commerce platform"
             ]
         },
         {
@@ -153,9 +140,9 @@ const data = {
           "title":"Graduate Trainee - Software Supplier Quality",
           "years":"June 2019 – March 2020",
           "description":[
-            "Develop and maintain quality documents for software supplier evaluation",
-            "Support improvement measures of suppliers' development and testing processes",
-            "Assist quality engineers across Hong Kong, Germany and US in supplier quality strategy"
+            "Developed and maintained quality documents for software supplier evaluation",
+            "Supported improvement measures of suppliers' development and testing processes",
+            "Assisted quality engineers across Hong Kong, Germany and US in supplier quality strategy"
             ]
         },
         {
@@ -163,7 +150,7 @@ const data = {
           "title":"Part-time Backend Developer",
           "years":"December 2018 – April 2019",
           "description":[
-            "Constructed server-side music albums upload system to various music platforms including Spotify, Apple Music, MOOV, etc. with Node.js, Docker and AWS",
+            "Constructed server-side music albums upload system to various music platforms including Spotify, Apple Music, etc. with Node.js, Docker and AWS",
             "Integrated continuously of the work with frontend developers"
             ]
         },
@@ -176,61 +163,49 @@ const data = {
             ]
         }
       ],
+      "skillmessage":"Here are my favourite library/framework/tools for frontend and backend development",
       "techs":{
         "front":[
           {
             "name": "React.js",
-            "img": "images/techs/front/react.png",
+            "img": "react.png",
             "description": "My favourite frontend modern JavaScript library which boosts productivity and facilitates further maintenance."
           },
           {
             "name": "React Native",
-            "img": "images/techs/front/react-native.png",
+            "img": "react-native.png",
             "description": "Convenient Framework to develop for multiple platforms as I can reuse the codebase (or just a part of it) between iOS and Android."
           },
           {
             "name": "Redux",
-            "img": "images/techs/front/redux.png",
+            "img": "redux.png",
             "description": "Javascript library for application state management. It's perfectly matched with React."
-          },{
-            "name": "GatsbyJS",
-            "img": "images/techs/front/gatsbyjs.png",
-            "description": "Javascript framework which makes the website incredibly fast."
-          },{
-            "name": "jQuery",
-            "img": "images/techs/front/jquery.png",
-            "description": "My favourite very first Javascript library I have learnt and it makes DOM manipulation much easier."
-          }
+          },
         ],
         "back":[
           {
             "name": "Express.js",
-            "img": "images/techs/back/expressjs.png",
+            "img": "expressjs.png",
             "description": "My first web application framework for Node.js. Everything is well-structured and orgranized and gives me a way to define routes of my web app."
           },
           {
             "name": "Next.js",
-            "img": "images/techs/back/nextjs.png",
+            "img": "nextjs.png",
             "description": "React framework which supports server-side rendering."
           },
           {
-            "name": "django",
-            "img": "images/techs/back/django.png",
-            "description": "Fast development and scalability Python framework."
-          },
-          {
             "name": "mongoDB",
-            "img": "images/techs/back/mongodb.png",
+            "img": "mongodb.png",
             "description": "Document-oriented database"
           },
           {
             "name": "Firebase",
-            "img": "images/techs/back/firebase.png",
+            "img": "firebase.png",
             "description": "Google's web and mobile platform which offers easy access to data, files, auth, etc."
           },
           {
             "name": "Docker",
-            "img": "images/techs/back/docker.jpeg",
+            "img": "docker.jpeg",
             "description": "Executable package of software which runs regardless of the environment"
           }
         ]

@@ -4,7 +4,7 @@ import './Resume.css'
 import styles from './Resume.style'
 import { useTheme } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUniversity, faBriefcase, faLaptopCode, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faUniversity, faBriefcase, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -31,12 +31,12 @@ function Resume(props) {
   var skillmessage = props.data.skillmessage;
 
   let educationLen = props.data.education.length;
-  var education = props.data.education.map(function (education, index) {
-    var eduDescription = education.description.map(function (description, index) {
+  let education = props.data.education.map(function (education, index) {
+    let eduDescription = education.description.map(function (description, index) {
       return <p className="description" key={index}>• {description}</p>
     })
     return <div key={index} className="item"><h3 className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.school}</h3>
-      <p className="info" className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
+      <p className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
       {eduDescription}
       {
         (index !== educationLen - 1) ? <hr /> : null
@@ -45,12 +45,12 @@ function Resume(props) {
   })
 
   let workLen = props.data.work.length;
-  var work = props.data.work.map(function (work, index) {
-    var workDescription = work.description.map(function (description, index) {
+  let work = props.data.work.map(function (work, index) {
+    let workDescription = work.description.map(function (description, index) {
       return <p className="description" key={index}>• {description}</p>
     })
     return <div key={work.company} className="item"><h3 className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.company}</h3>
-      <p className="info" className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+      <p className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
       {workDescription}
       {
         (index !== workLen - 1) ? <hr /> : null
@@ -59,6 +59,7 @@ function Resume(props) {
   })
 
   var front = props.data.techs.front.map(function (techs) {
+    let techsImg = require('../../static/images/techs/front/'+ techs.img);
     return <Accordion key={techs.name}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
@@ -66,7 +67,7 @@ function Resume(props) {
         id="panel1a-header"
       >
         <Grid item xs={3}>
-          <Avatar alt={techs.name} src={techs.img} style={{margin: '0 auto'}}/>
+          <Avatar alt={techs.name} src={techsImg} style={{margin: '0 auto'}}/>
         </Grid>
         <Grid item xs={9} style={{padding: '0 10px'}}>
           {techs.name}
@@ -80,6 +81,7 @@ function Resume(props) {
     </Accordion>
   })
   var back = props.data.techs.back.map(function (techs) {
+    let techsImg = require('../../static/images/techs/back/'+ techs.img);
     return <Accordion key={techs.name}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
@@ -87,7 +89,7 @@ function Resume(props) {
         id="panel1a-header"
       >
         <Grid item xs={3}>
-          <Avatar alt={techs.name} src={techs.img} style={{margin: '0 auto'}}/>
+          <Avatar alt={techs.name} src={techsImg} style={{margin: '0 auto'}}/>
         </Grid>
         <Grid item xs={9} style={{padding: '0 10px'}}>
           {techs.name}

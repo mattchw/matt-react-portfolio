@@ -38,7 +38,7 @@ function Projects(props) {
       <Grid item xs sm={11} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid item>
           <Fade bottom cascade>
-          <h1>Some of My Recent Works</h1>
+          <h1>Some of My Works</h1>
           </Fade>
         </Grid>
 

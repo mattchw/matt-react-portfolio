@@ -11,7 +11,7 @@ const data = {
       // secondary profile picture displayed in contact section
       "secondaryImg":"profilepic-contact.png",
       // bio in about
-      "bio":"Being an enthusiastc Computer Science graduate with an internship experience at Robert Bosch Co. Ltd., I am looking for a full-time software engineer position to utilize my logical thinking skills and programming knowledge to provide with outstanding software solutions.",
+      "bio":"A Backend Developer for Zensis Limited in HK Science Park. Having worked at both frontend and backend positions for 2+ years, I really enjoy using my technical skills and expertise to deliver outstanding software solutions for the clients.",
       "contactmessage":"Here is the contact details so that you can get in contact with me.",
       // display in contact
       "email": "matthew.chohin@gmail.com",

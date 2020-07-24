@@ -19,11 +19,15 @@ This is my personal website built with React, using React Hook.
 
 Open `src/static/data.js` and replace the data with your personal information.
 
+Open `public/index.html` and replace the title and the description.
+
 ### 2. Replace the images
 
 Go to `src/static/images` and put your own images into this directory.
 
 Make sure the names of your images are the same as the names inside `src/static/data.js`.
+
+Also, don't forget to change the favicon. Go to `public` folder and replace the `favicon.ico` with your own one.
 
 ### 3. Of course. You can change the style of the website
 

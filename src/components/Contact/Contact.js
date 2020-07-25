@@ -97,7 +97,7 @@ function Contact(props) {
           </Grid>
         </Fade>
         <Grid item style={{ paddingTop: 50 }}>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} netlify>
             <p>
               <label>
                 Your Name: <input type="text" name="name" />

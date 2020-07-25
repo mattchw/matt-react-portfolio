@@ -20,6 +20,7 @@ const useStyles = styles;
 function Contact(props) {
   const classes = useStyles();
   const [values, setValues] = React.useState({
+    "form-name": 'mattwong.info',
     name: '',
     email: '',
     message: '',
@@ -35,11 +36,11 @@ function Contact(props) {
       return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
     })
   }
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  //       .join("&");
+  // }
   
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });
@@ -48,8 +49,9 @@ function Contact(props) {
   const handleSubmit = e => {
     fetch("https://formspree.io/xwkranjz", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "mattwong.info", ...values })
+      headers: { Accept: "application/json",
+      "Content-Type": "application/json" },
+      body: JSON.stringify(values)
     })
       .then(() => {
         alert("Success!");

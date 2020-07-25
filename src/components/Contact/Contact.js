@@ -19,6 +19,12 @@ const useStyles = styles;
 
 function Contact(props) {
   const classes = useStyles();
+  const [values, setValues] = React.useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [status, setStatus] = React.useState(null);
 
   if (props.data) {
     var name = props.data.name;
@@ -30,6 +36,33 @@ function Contact(props) {
       return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
     })
   }
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+  
+  const handleChange = prop => event => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleSubmit = e => {
+    fetch("https://formspree.io/xwkranjz", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "mattwong.info", ...values })
+    })
+      .then(() => {
+        alert("Success!");
+        setStatus("SUCCESS");
+      })
+      .catch(error => {
+        alert(error);
+        setStatus("ERROR");
+      });
+
+    e.preventDefault();
+  };
 
   return (
     <Container id="contact" maxWidth='xl' className="footer">
@@ -85,15 +118,24 @@ function Contact(props) {
           </Grid>
         </Fade>
         <Grid item style={{ paddingTop: 50 }}>
-          <form name="contact" netlify>
+          <form onSubmit={handleSubmit}>
             <p>
-              <label>Name <input type="text" name="name" /></label>
+              <label>
+                Your Name: <input type="text" name="name" value={values.name} onChange={handleChange('name')}/>
+              </label>
             </p>
             <p>
-              <label>Email <input type="email" name="email" /></label>
+              <label>
+                Your Email: <input type="email" name="email" value={values.email} onChange={handleChange('email')}/>
+              </label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <label>
+                Message: <textarea name="message" value={values.message} onChange={handleChange('message')}/>
+              </label>
+            </p>
+            <p>
+            <button type="submit">Send</button>
             </p>
           </form>
         </Grid>

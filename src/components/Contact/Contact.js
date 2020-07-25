@@ -31,18 +31,6 @@ function Contact(props) {
     })
   }
 
-  const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-
   return (
     <Container id="contact" maxWidth='xl' className="footer">
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>

@@ -35,7 +35,7 @@ function Contact(props) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      
+
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -97,21 +97,12 @@ function Contact(props) {
           </Grid>
         </Fade>
         <Grid item style={{ paddingTop: 50 }}>
-          <form onSubmit={handleSubmit} netlify>
+          <form name="contact" netlify>
             <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
+              <label>Name <input type="text" name="name" /></label>
             </p>
             <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message" />
-              </label>
+              <label>Email <input type="email" name="email" /></label>
             </p>
             <p>
               <button type="submit">Send</button>

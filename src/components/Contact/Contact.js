@@ -10,6 +10,7 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import TextField from '@material-ui/core/TextField';
 
 import { Link } from 'react-scroll';
 
@@ -41,7 +42,7 @@ function Contact(props) {
   //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
   //       .join("&");
   // }
-  
+
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });
   };
@@ -49,8 +50,10 @@ function Contact(props) {
   const handleSubmit = e => {
     fetch("https://formspree.io/xwkranjz", {
       method: "POST",
-      headers: { Accept: "application/json",
-      "Content-Type": "application/json" },
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify(values)
     })
       .then(() => {
@@ -116,26 +119,45 @@ function Contact(props) {
             </div>
           </Grid>
         </Fade>
-        <Grid item style={{ paddingTop: 50 }}>
+        <Grid item style={{ paddingTop: 50, width: '80%'}}>
           <form onSubmit={handleSubmit}>
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" value={values.name} onChange={handleChange('name')}/>
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" value={values.email} onChange={handleChange('email')}/>
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message" value={values.message} onChange={handleChange('message')}/>
-              </label>
-            </p>
-            <p>
-            <button type="submit">Send</button>
-            </p>
+            <div>
+              <TextField
+                required
+                variant="outlined"
+                label="Name"
+                fullWidth
+                value={values.name}
+                onChange={handleChange('name')}
+                style={{margin: 10}}
+              />
+            </div>
+            <div>
+              <TextField
+                required
+                variant="outlined"
+                label="Email"
+                fullWidth
+                value={values.email}
+                onChange={handleChange('email')}
+                style={{margin: 10}}
+              />
+            </div>
+            <div>
+              <TextField
+                label="Message"
+                multiline
+                rows={5}
+                variant="outlined"
+                fullWidth
+                value={values.message}
+                onChange={handleChange('message')}
+                style={{margin: 10}}
+              />
+            </div>
+            <Button size="small" type="submit" className={classes.smallFont}>
+              Send
+            </Button>
           </form>
         </Grid>
 

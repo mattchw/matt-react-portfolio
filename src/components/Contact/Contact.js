@@ -24,7 +24,6 @@ function Contact(props) {
     email: '',
     message: '',
   });
-  const [status, setStatus] = React.useState(null);
 
   if (props.data) {
     var name = props.data.name;
@@ -54,11 +53,9 @@ function Contact(props) {
     })
       .then(() => {
         alert("Success!");
-        setStatus("SUCCESS");
       })
       .catch(error => {
         alert(error);
-        setStatus("ERROR");
       });
 
     e.preventDefault();

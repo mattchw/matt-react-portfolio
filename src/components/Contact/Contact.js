@@ -22,14 +22,26 @@ function Contact(props) {
 
   if (props.data) {
     var name = props.data.name;
-    var profilepic = require('../../static/images/profilepic/'+ props.data.secondaryImg)
-    var logo = require('../../static/images/logo/'+ props.data.logo)
+    var profilepic = require('../../static/images/profilepic/' + props.data.secondaryImg)
+    var logo = require('../../static/images/logo/' + props.data.logo)
     var city = props.data.address.city;
     var email = props.data.email;
     var networks = props.data.social.map(function (network) {
       return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
     })
   }
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
 
   return (
     <Container id="contact" maxWidth='xl' className="footer">
@@ -84,6 +96,29 @@ function Contact(props) {
             </div>
           </Grid>
         </Fade>
+        <Grid item style={{ paddingTop: 50 }}>
+          <form onSubmit={handleSubmit}>
+            <p>
+              <label>
+                Your Name: <input type="text" name="name" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your Email: <input type="email" name="email" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Message: <textarea name="message" />
+              </label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+        </Grid>
+
         <Grid item style={{ paddingTop: 50 }}>
           <hr />
           <ul className="copyright" style={{ paddingTop: 20 }}>

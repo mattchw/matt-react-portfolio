@@ -101,9 +101,9 @@ function Contact(props) {
               </Grid>
               <Grid className="general">
                 <Grid className={classes.smallFont}>
-                  <p className="address">
+                  <p className="address" style={{color: '#525252'}}>
                     <span>
-                      <FontAwesomeIcon style={{ margin: "0 5" }} icon={faMapMarkerAlt} />
+                      <FontAwesomeIcon style={{ margin: "0 5"}} icon={faMapMarkerAlt} />
                       {city}
                     </span><br />
                     <Button size="small" href={"mailto:" + email} className={classes.smallFont}>
@@ -119,7 +119,7 @@ function Contact(props) {
             </div>
           </Grid>
         </Fade>
-        <Grid item style={{ paddingTop: 50, width: '80%'}}>
+        <Grid item style={{ paddingTop: 50, width: '75%'}}>
           <form onSubmit={handleSubmit}>
             <div>
               <TextField

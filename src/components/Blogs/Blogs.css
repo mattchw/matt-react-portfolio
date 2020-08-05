@@ -1,6 +1,6 @@
-.project {
+.blogs {
   /* The image used */
-  background: #666 url(../../static/images/background.png) no-repeat right top;
+  background: #444444 url(../../static/images/background.png) no-repeat right top;
   background-size: cover;
 
   overflow: hidden;
@@ -15,7 +15,7 @@
   background-size: cover; */
   color: white;
 }
-#projects hr {
+#blogs hr {
   width: 50%;
 }
 
@@ -23,6 +23,7 @@
   position: relative;
   width: 95%;
   max-width: 400px;
+  max-height: 300px;
   margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
@@ -93,11 +94,20 @@
   position: relative;
 }
 
-.image {
-  display: block;
+#blogs .image {
+  object-fit: cover;
   width: 100%;
-  height: auto;
-  border-radius: 15px;
+  height: 250px;
+}
+
+#blogs a{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+#blogs h4{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .overlay {
@@ -132,37 +142,37 @@
 }
 
 @media only screen and (min-width: 0px) {
-  #projects p {
+  #blogs p {
       font-size: 12px;
   }
-  #projects h3 {
+  #blogs h3 {
     font-size: 15px;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  #projects p {
+  #blogs p {
       font-size: 13px;
   }
-  #projects h3 {
+  #blogs h3 {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  #projects p {
+  #blogs p {
       font-size: 15px;
   }
-  #projects h3 {
+  #blogs h3 {
     font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  #projects p {
+  #blogs p {
       font-size: 18px;
   }
-  #projects h3 {
+  #blogs h3 {
     font-size: 25px;
   }
 }

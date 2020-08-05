@@ -1,6 +1,6 @@
 #contact {
   /* The image used */
-  background: url(../../static/images/background.png) no-repeat right top;
+  background: #444 url(../../static/images/background.png) no-repeat right top;
   background-size: cover;
 
   overflow: hidden;
@@ -13,6 +13,7 @@
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
+  color: white;
 }
 
 #contact .card {

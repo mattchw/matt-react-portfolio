@@ -124,23 +124,23 @@ function Contact(props) {
             <div>
               <TextField
                 required
-                variant="outlined"
+                variant="filled"
                 label="Name"
                 fullWidth
                 value={values.name}
                 onChange={handleChange('name')}
-                style={{margin: 10}}
+                style={{margin: 10, backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
               />
             </div>
             <div>
               <TextField
                 required
-                variant="outlined"
+                variant="filled"
                 label="Email"
                 fullWidth
                 value={values.email}
                 onChange={handleChange('email')}
-                style={{margin: 10}}
+                style={{margin: 10, backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
               />
             </div>
             <div>
@@ -148,14 +148,14 @@ function Contact(props) {
                 label="Message"
                 multiline
                 rows={5}
-                variant="outlined"
+                variant="filled"
                 fullWidth
                 value={values.message}
                 onChange={handleChange('message')}
-                style={{margin: 10}}
+                style={{margin: 10, backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
               />
             </div>
-            <Button size="small" type="submit" className={classes.smallFont}>
+            <Button size="small" type="submit" className={classes.smallFont} style={{color: '#e2e2e2'}}>
               Send
             </Button>
           </form>

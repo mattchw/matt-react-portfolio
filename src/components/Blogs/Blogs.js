@@ -41,7 +41,7 @@ function Blogs(props) {
           </Fade>
         </Grid>
 
-        <Grid item container direction="row" justify="center" alignItems="center">
+        <Grid item container direction="row" justify="flex-start" alignItems="flex-start">
           {data && data.slice(0,8).map((item) => (
             <Grid item md={6} lg={3} key={item.title} style={{ padding: 10 }}>
                 <a href={item.link} title={item.title}>

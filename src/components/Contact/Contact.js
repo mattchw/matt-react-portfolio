@@ -119,7 +119,8 @@ function Contact(props) {
             </div>
           </Grid>
         </Fade>
-        <Grid item style={{ paddingTop: 50, width: '75%'}}>
+        <Grid item style={{ paddingTop: 20, width: '75%'}}>
+        <h5>Have a question or want to work together?</h5>
           <form onSubmit={handleSubmit}>
             <div>
               <TextField
@@ -129,7 +130,7 @@ function Contact(props) {
                 fullWidth
                 value={values.name}
                 onChange={handleChange('name')}
-                style={{margin: 10, backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
+                style={{margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
               />
             </div>
             <div>
@@ -140,7 +141,7 @@ function Contact(props) {
                 fullWidth
                 value={values.email}
                 onChange={handleChange('email')}
-                style={{margin: 10, backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
+                style={{margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
               />
             </div>
             <div>
@@ -152,16 +153,16 @@ function Contact(props) {
                 fullWidth
                 value={values.message}
                 onChange={handleChange('message')}
-                style={{margin: 10, backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
+                style={{margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
               />
             </div>
-            <Button size="small" type="submit" className={classes.smallFont} style={{color: '#e2e2e2'}}>
+            <Button size="small" type="submit" className={classes.smallFont} style={{color: '#e2e2e2', fontWeight: 'bold'}}>
               Send
             </Button>
           </form>
         </Grid>
 
-        <Grid item style={{ paddingTop: 50 }}>
+        <Grid item style={{ paddingTop: 20 }}>
           <hr />
           <ul className="copyright" style={{ paddingTop: 20 }}>
             <li>Copyright &copy; Matthew Wong {(new Date().getFullYear())}</li>

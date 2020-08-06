@@ -36,7 +36,7 @@ function Resume(props) {
       return <p className="description" key={index}>• {description}</p>
     })
     return <div key={index} className="item"><h3 className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.school}</h3>
-      <p className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
+      <p className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{education.degree} <span>&bull;</span> <em className="date">{education.graduated}</em></p>
       {eduDescription}
       {
         (index !== educationLen - 1) ? <hr /> : null
@@ -50,7 +50,7 @@ function Resume(props) {
       return <p className="description" key={index}>• {description}</p>
     })
     return <div key={work.company} className="item"><h3 className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.company}</h3>
-      <p className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+      <p className={smMedia ? classes.resumeRightInfo : classes.resumeRightInfoName}>{work.title} <span>&bull;</span> <em className="date">{work.years}</em></p>
       {workDescription}
       {
         (index !== workLen - 1) ? <hr /> : null
@@ -151,9 +151,7 @@ function Resume(props) {
         <Grid item xs={12} sm={9} container style={{ padding: 10 }}>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs style={{fontStyle: 'italic'}}>
-              <Fade bottom cascade>
                 {skillmessage}
-              </Fade>
             </Grid>
             <Grid item xs>
               <Fade bottom cascade>

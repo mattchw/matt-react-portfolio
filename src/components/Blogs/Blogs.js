@@ -5,6 +5,7 @@ import styles from './Blogs.style'
 
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
+import Chip from '@material-ui/core/Chip';
 
 import Fade from 'react-reveal/Fade';
 
@@ -23,6 +24,7 @@ function Blogs(props) {
           // Fillter the array
           const res = data.items //This is an array with the content. No feed, no info about author etc..
           const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+          console.log(posts)
           setData(posts);
         })
     };
@@ -40,12 +42,16 @@ function Blogs(props) {
         </Grid>
 
         <Grid item container direction="row" justify="center" alignItems="center">
-          {data && data.map((item) => (
+          {data && data.slice(0,8).map((item) => (
             <Grid item md={6} lg={3} key={item.title} style={{ padding: 10 }}>
                 <a href={item.link} title={item.title}>
                   <img src={item.thumbnail} alt={item.title} className="image" />
                   <h4>{item.title}</h4>
-                  <p>{item.pubDate}</p>
+                  <hr/>
+                  <p>{item.pubDate.slice(0,10)}</p>
+                  {item.categories.slice(0,3).map((category)=>(
+                    <Chip key={category} label={category} style={{margin: 3}}/>
+                  ))}
                 </a>
             </Grid>
           )

@@ -15,9 +15,6 @@
   background-size: cover; */
   color: white;
 }
-#blogs hr {
-  width: 50%;
-}
 
 .content {
   position: relative;
@@ -108,6 +105,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 10px;
+}
+#blogs hr{
+  border: 1px solid #11ABB0 ;
+  width: 80%;
 }
 
 .overlay {
@@ -146,33 +148,33 @@
       font-size: 12px;
   }
   #blogs h3 {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
 @media only screen and (min-width: 600px) {
   #blogs p {
-      font-size: 13px;
+      font-size: 12px;
   }
   #blogs h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
 @media only screen and (min-width: 960px) {
   #blogs p {
-      font-size: 15px;
+      font-size: 13px;
   }
   #blogs h3 {
-    font-size: 22px;
+    font-size: 17px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   #blogs p {
-      font-size: 18px;
+      font-size: 15px;
   }
-  #blogs h3 {
-    font-size: 25px;
+  #blogs h4 {
+    font-size: 18px;
   }
 }

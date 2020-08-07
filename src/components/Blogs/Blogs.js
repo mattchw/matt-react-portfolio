@@ -6,6 +6,7 @@ import styles from './Blogs.style'
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Chip from '@material-ui/core/Chip';
+import Button from '@material-ui/core/Button';
 
 import Fade from 'react-reveal/Fade';
 
@@ -32,6 +33,10 @@ function Blogs(props) {
     fetchData();
   }, []);
 
+  if (props.data) {
+    var blog = props.data.blog;
+  }
+
   return (
     <Container maxWidth='xl' className="blog" id="blogs">
       <Grid item xs sm={11} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
@@ -56,6 +61,11 @@ function Blogs(props) {
             </Grid>
           )
           )}
+        </Grid>
+        <Grid item container direction="row" justify="center" alignItems="center">
+          <Button size="large" variant="contained" href={blog} className={classes.smallFont} style={{fontWeight: 'bold'}}>
+            More
+          </Button>
         </Grid>
       </Grid>
     </Container>

@@ -37,11 +37,6 @@ function Contact(props) {
       return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
     })
   }
-  // const encode = (data) => {
-  //   return Object.keys(data)
-  //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  //       .join("&");
-  // }
 
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });

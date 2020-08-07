@@ -22,7 +22,8 @@ const data = {
         "state":"HK SAR",
         "zip": "(Your Zip/Postal Code)"
       },
-      "website": "",
+      "website": "https://mattwong.info",
+      "blog": "https://medium.com/@matthew.chohin",
       // social network
       "social":[
         {

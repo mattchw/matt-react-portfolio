@@ -246,7 +246,7 @@ function App() {
           <Projects data={data.portfolio} />
         </div>
         <div id="Blogs" ref={blogsRef}>
-          <Blogs data={data.portfolio} />
+          <Blogs data={data.main} />
         </div>
         <div id="Contact" ref={contactRef}>
           <Contact data={data.main} />

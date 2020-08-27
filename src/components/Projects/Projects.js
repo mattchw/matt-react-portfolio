@@ -42,7 +42,7 @@ function Projects(props) {
           </Fade>
         </Grid>
 
-        <Grid item container direction="row" justify="center" alignItems="center">
+        <Grid item container direction="row" justify="flex-start" alignItems="flex-start">
           {projects}
         </Grid>
       </Grid>

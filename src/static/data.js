@@ -128,15 +128,6 @@ const data = {
             ]
         },
         {
-          "company":"Varmeego Limited",
-          "title":"Java Programmer",
-          "years":"March 2020 – June 2020",
-          "description":[
-            "Performed system analysis, design and development with Java, Spring, SAP e-commerce Hybris framework and Oracle Database",
-            "Came up with data migration strategy and execution plan to migrate data from Hybris platform to revamped e-commerce platform"
-            ]
-        },
-        {
           "company":"Robert Bosch Co Ltd.",
           "title":"Graduate Trainee - Software Supplier Quality",
           "years":"June 2019 – March 2020",
@@ -215,16 +206,16 @@ const data = {
     "portfolio":{
       "projects": [
         {
+          "title":"BeWater Guide",
+          "category":"React/Redux web application with Spring Boot server showing celebrities’ political stances",
+          "image":"BeWaterGuide.png",
+          "url":"https://github.com/mattchw/BeWater-Guide"
+        },
+        {
           "title":"Shopway",
           "category":"(offline)Shopping routes planning helper",
           "image":"shopway.png",
           "url":""
-        },
-        {
-          "title":"CUberEats",
-          "category":"Native Android app providing CUHK students food ordering & delivery in the campus",
-          "image":"cubereats.png",
-          "url":"https://github.com/mattchw/CUberEats"
         },
         {
           "title":"Buy2Play",

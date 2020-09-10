@@ -1,4 +1,7 @@
 const data = {
+    "config": {
+      "GA": "UA-157376683-1"
+    },
     "main": {
       "name":"Matt Wong",
       "occupation":"Backend Developer",

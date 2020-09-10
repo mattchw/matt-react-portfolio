@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 
+import ReactGA from 'react-ga';
+
 // data
 import data from './static/data'
 
@@ -75,6 +77,7 @@ function App() {
   };
 
   useEffect(() => {
+    ReactGA.initialize(data.config.GA);
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 50;
 

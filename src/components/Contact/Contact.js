@@ -14,8 +14,6 @@ import TextField from '@material-ui/core/TextField';
 
 import { Link } from 'react-scroll';
 
-import Fade from 'react-reveal/Fade';
-
 const useStyles = styles;
 
 function Contact(props) {
@@ -76,46 +74,44 @@ function Contact(props) {
         <Grid item>
           <h1>Contact</h1>
         </Grid>
-        <Fade bottom cascade>
-          <Grid item container >
-            <div className="card">
-              <Grid className="additional" style={{ margin: "auto 0" }}>
-                <Grid style={{ margin: "auto", padding: 10 }}>
-                  <img src={logo} alt="logo" style={{ width: 30 }} />
-                  <div style={{ margin: "auto" }} className="circle">
-                    <img src={profilepic} alt={name} />
-                  </div>
+        <Grid item container >
+          <div className="card">
+            <Grid className="additional" style={{ margin: "auto 0" }}>
+              <Grid style={{ margin: "auto", padding: 10 }}>
+                <img src={logo} alt="logo" style={{ width: 30 }} />
+                <div style={{ margin: "auto" }} className="circle">
+                  <img src={profilepic} alt={name} />
+                </div>
 
-                  <div className="cardName">
-                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faUser} />
-                    <span>{name}</span>
-                  </div>
-
-                </Grid>
+                <div className="cardName">
+                  <FontAwesomeIcon style={{ margin: "0 5" }} icon={faUser} />
+                  <span>{name}</span>
+                </div>
 
               </Grid>
-              <Grid className="general">
-                <Grid className={classes.smallFont}>
-                  <p className="address" style={{color: '#525252'}}>
-                    <span>
-                      <FontAwesomeIcon style={{ margin: "0 5"}} icon={faMapMarkerAlt} />
-                      {city}
-                    </span><br />
-                    <Button size="small" href={"mailto:" + email} className={classes.smallFont}>
-                      <FontAwesomeIcon style={{ margin: "0 5" }} icon={faEnvelope} />
-                      {email}
-                    </Button>
-                  </p>
-                  <ul className="social-links more">
-                    {networks}
-                  </ul>
-                </Grid>
+
+            </Grid>
+            <Grid className="general">
+              <Grid className={classes.smallFont}>
+                <p className="address" style={{ color: '#525252' }}>
+                  <span>
+                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faMapMarkerAlt} />
+                    {city}
+                  </span><br />
+                  <Button size="small" href={"mailto:" + email} className={classes.smallFont}>
+                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faEnvelope} />
+                    {email}
+                  </Button>
+                </p>
+                <ul className="social-links more">
+                  {networks}
+                </ul>
               </Grid>
-            </div>
-          </Grid>
-        </Fade>
-        <Grid item style={{ paddingTop: 20, width: '75%'}}>
-        <h5>Have a question or want to work together?</h5>
+            </Grid>
+          </div>
+        </Grid>
+        <Grid item style={{ paddingTop: 20, width: '75%' }}>
+          <h5>Have a question or want to work together?</h5>
           <form onSubmit={handleSubmit}>
             <div>
               <TextField
@@ -125,7 +121,7 @@ function Contact(props) {
                 fullWidth
                 value={values.name}
                 onChange={handleChange('name')}
-                style={{margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
+                style={{ margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0' }}
               />
             </div>
             <div>
@@ -136,7 +132,7 @@ function Contact(props) {
                 fullWidth
                 value={values.email}
                 onChange={handleChange('email')}
-                style={{margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
+                style={{ margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0' }}
               />
             </div>
             <div>
@@ -148,10 +144,10 @@ function Contact(props) {
                 fullWidth
                 value={values.message}
                 onChange={handleChange('message')}
-                style={{margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0'}}
+                style={{ margin: '10px auto', backgroundColor: '#e2e2e2', borderRadius: '5px 5px 0 0' }}
               />
             </div>
-            <Button size="small" type="submit" className={classes.smallFont} style={{color: '#e2e2e2', fontWeight: 'bold'}}>
+            <Button size="small" type="submit" className={classes.smallFont} style={{ color: '#e2e2e2', fontWeight: 'bold' }}>
               Send
             </Button>
           </form>

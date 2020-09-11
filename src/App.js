@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 
-import ReactGA from 'react-ga';
-
 // data
 import data from './static/data'
 
@@ -16,6 +14,9 @@ import Contact from './components/Contact/Contact'
 
 import { stack as Menu } from 'react-burger-menu'
 import Hidden from '@material-ui/core/Hidden';
+
+import ReactGA from 'react-ga';
+ReactGA.initialize(data.config.GA);
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -77,7 +78,8 @@ function App() {
   };
 
   useEffect(() => {
-    ReactGA.initialize(data.config.GA);
+    ReactGA.pageview(window.location.pathname);
+    
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 50;
 

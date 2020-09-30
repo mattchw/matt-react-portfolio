@@ -43,11 +43,6 @@ const data = {
           "name":"github",
           "url":"http://github.com/mattchw",
           "className":"fa fa-github"
-        },
-        {
-          "name":"skype",
-          "url":"http://skype.com",
-          "className":"fa fa-skype"
         }
       ],
       // in about section
@@ -94,10 +89,6 @@ const data = {
         {
           "name":"Python",
           "level": 65
-        },
-        {
-          "name":"Swift",
-          "level": 75
         },
       ],
     },
@@ -184,12 +175,7 @@ const data = {
             "description": "My first web application framework for Node.js. Everything is well-structured and orgranized and gives me a way to define routes of my web app."
           },
           {
-            "name": "Next.js",
-            "img": "nextjs.png",
-            "description": "React framework which supports server-side rendering."
-          },
-          {
-            "name": "mongoDB",
+            "name": "MongoDB",
             "img": "mongodb.png",
             "description": "Document-oriented database"
           },

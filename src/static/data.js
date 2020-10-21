@@ -68,27 +68,33 @@ const data = {
       "skills":[
         {
           "name":"HTML",
-          "level": 90
+          "level": 90,
+          "icon": "fa fa-html5"
         },
         {
           "name":"CSS",
-          "level": 85
+          "level": 85,
+          "icon": "fab fa-css3-alt"
         },
         {
           "name":"JS",
-          "level": 85
+          "level": 85,
+          "icon": "fab fa-js-square"
         },
         {
           "name":"Nodejs",
-          "level": 80
+          "level": 80,
+          "icon": "fab fa-node-js"
         },
         {
           "name":"Java",
-          "level": 75
+          "level": 75,
+          "icon": "fab fa-java"
         },
         {
           "name":"Python",
-          "level": 65
+          "level": 65,
+          "icon": "fab fa-python"
         },
       ],
     },

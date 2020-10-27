@@ -22,8 +22,8 @@
 
 .about-img-circle {
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@
  }
 
 .about-img {
-  width: 200px;
+  width: 250px;
 }
 
 .about-skills {

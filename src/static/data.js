@@ -201,28 +201,22 @@ const data = {
     "portfolio":{
       "projects": [
         {
+          "title":"Killer Queue",
+          "category":"MERN stack application for shop/restaurant to organise queueing effectively",
+          "image":"KillerQueue.png",
+          "url":"https://github.com/mattchw/Killer-Queue"
+        },
+        {
           "title":"BeWater Guide",
           "category":"React/Redux web application with Spring Boot server showing celebrities’ political stances",
           "image":"BeWaterGuide.png",
           "url":"https://github.com/mattchw/BeWater-Guide"
         },
         {
-          "title":"Shopway",
-          "category":"(offline)Shopping routes planning helper",
-          "image":"shopway.png",
-          "url":""
-        },
-        {
           "title":"Buy2Play",
-          "category":"Web app specially designed for second-hand game trading",
+          "category":"Nodejs with Express.js Web app for second-hand game trading",
           "image":"Buy2Play.png",
           "url":"https://github.com/mattchw/buy2play"
-        },
-        {
-          "title":"CUHK Chinese Map",
-          "category":"Platform for sharing and reading literatures of various locations in CUHK campus",
-          "image":"CUHKcmap.png",
-          "url":"http://www.cuhk.edu.hk/chi/chltmap/index.html"
         },
         {
           "title":"VeriMarker",
@@ -235,7 +229,13 @@ const data = {
           "category":"Standalone web app for teachers to analyze students' performance and assign grades",
           "image":"GradeStudio.png",
           "url":"https://github.com/mattchw/Grade-Studio-Standalone"
-        }
+        },
+        {
+          "title":"CUHK Chinese Map",
+          "category":"Platform for sharing and reading literatures of various locations in CUHK campus",
+          "image":"CUHKcmap.png",
+          "url":"http://www.cuhk.edu.hk/chi/chltmap/index.html"
+        },
       ]
     }
   };

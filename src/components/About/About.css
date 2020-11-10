@@ -1,6 +1,6 @@
 .about {
   /* The image used */
-  background: #444444 url(../../static/images/background.png) no-repeat right top;
+  background: white url(../../static/images/background.png) no-repeat right top;
   background-size: cover;
 
   overflow: hidden;
@@ -13,7 +13,7 @@
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-  color: white;
+  color: #404040;
 }
 
 .about-container {
@@ -41,14 +41,14 @@
 }
 
 .about h3 {
-  color: #fff;
+  color: black;
   margin: 12px 0;
-  border-bottom: 3px solid #11ABB0;
+  border-bottom: 3px solid #025f89;
   padding-top: 10px;
 }
 
 .about-skills-text {
-  color: #fff;
+  color: black;
   margin: 12px 0;
   padding: 5px 0;
   border-bottom: 2px dotted #989898;
@@ -59,7 +59,7 @@
   margin-left: 30px;
   margin-right: 30px;
    line-height: 30px;
-   color: #dcdcdc;
+   color: #313131;
 }
 
 .icons a:hover, .icons a:focus { color: #11ABB0; }

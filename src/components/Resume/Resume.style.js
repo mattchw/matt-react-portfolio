@@ -10,12 +10,12 @@ export default makeStyles(theme => ({
     paddingTop: 10,
 	},
 	resumeLeftTitle: {
-		borderLeft: '3px solid #11ABB0',
+		borderLeft: '3px solid #025f89',
 		float: 'left',
 		paddingLeft: 10,
 	},
 	resumeLeftTitleSM: {
-		borderBottom: '3px solid #11ABB0',
+		borderBottom: '3px solid #025f89',
 		float: 'left',
 		padding: 10,
 	},

@@ -40,9 +40,10 @@ function Blogs(props) {
   return (
     <Container maxWidth='xl' className="blog" id="blogs">
       <Grid item xs sm={11} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
-        <Grid item>
+        <Grid item className="blog-title">
           <Fade bottom cascade>
             <h1>My Latest Blogs</h1>
+            <hr/>
           </Fade>
         </Grid>
 

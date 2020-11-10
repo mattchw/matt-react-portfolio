@@ -34,31 +34,31 @@
 
 @media only screen and (min-width: 0px) {
   .selected {
-    border-left: 3px solid #11ABB0;
-    color: #11ABB0;
+    border-left: 3px solid #168ac0;
+    color: #168ac0;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .selected {
-    border-left: 3px solid #11ABB0;
-    color: #11ABB0;
+    border-left: 3px solid #168ac0;
+    color: #168ac0;
   }
 }
 
 @media only screen and (min-width: 960px) {
   .selected {
     border-left: 0px;
-    border-bottom: 3px solid #11ABB0;
-    color: #11ABB0;
+    border-bottom: 3px solid #168ac0;
+    color: #168ac0;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .selected {
     border-left: 0px;
-    border-bottom: 3px solid #11ABB0;
-    color: #11ABB0;
+    border-bottom: 3px solid #168ac0;
+    color: #168ac0;
   }
 }
 
@@ -68,8 +68,8 @@
   width: 30px;
   height: 25px;
   right: 5%;
-  border: 10px solid #0c9498;
-  background-color: #0c9498;
+  border: 10px solid #025f89;
+  background-color: #025f89;
   transition: top 1s;
 }
 

@@ -1,6 +1,6 @@
 .project {
   /* The image used */
-  background: #444 url(../../static/images/background.png) no-repeat right top;
+  /* background: #444 url(../../static/images/background.png) no-repeat right top; */
   background-size: cover;
 
   overflow: hidden;
@@ -13,10 +13,12 @@
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-  color: white;
+  color: black;
 }
-#projects hr {
+.projects-title hr {
   width: 50%;
+  border: 1px solid #025f89;
+  margin-bottom: 5vh;
 }
 
 .content {
@@ -25,7 +27,7 @@
   max-width: 400px;
   margin: 20px auto;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .content .content-overlay {
@@ -91,6 +93,8 @@
 
 .container {
   position: relative;
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 }
 
 .image {

@@ -36,9 +36,10 @@ function Projects(props) {
   return (
     <Container maxWidth='xl' className="project" id="projects">
       <Grid item xs sm={11} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
-        <Grid item>
+        <Grid item className="projects-title">
           <Fade bottom cascade>
           <h1>Some of My Works</h1>
+          <hr/>
           </Fade>
         </Grid>
 

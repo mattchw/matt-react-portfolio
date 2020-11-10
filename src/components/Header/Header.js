@@ -18,6 +18,9 @@ function Header(props) {
 
   return (
     <Container maxWidth='xl' className="header" id="header">
+      <div className="phone-frame">
+        <div className="phone-top"/>
+      </div>
       <Grid container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid item>
           <Typist className="responsive-headline" avgTypingDelay={150}>

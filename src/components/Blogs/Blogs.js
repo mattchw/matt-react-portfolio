@@ -25,7 +25,7 @@ function Blogs(props) {
           // Fillter the array
           const res = data.items //This is an array with the content. No feed, no info about author etc..
           const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
-          console.log(posts)
+          // console.log(posts)
           setData(posts);
         })
     };

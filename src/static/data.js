@@ -10,7 +10,7 @@ const data = {
       // logo displayed in contact section
       "logo": "logo.png",
       // primary profile picture displayed in about section
-      "primaryImg":"profilepic-about.jpg",
+      "primaryImg":"profilepic-about.svg",
       // secondary profile picture displayed in contact section
       "secondaryImg":"profilepic-contact.png",
       // bio in about

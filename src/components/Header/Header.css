@@ -1,6 +1,8 @@
 .header {
     /* The image used */
-    background-image: url(../../static/images/header-background.jpg);
+    background-image: url(../../static/images/header-background.svg);
+    /* background-image: url(https://cdn.dribbble.com/users/159888/screenshots/3175882/santa_claws.png);
+    background-image: linear-gradient(to top right,#1136b0,#115bb0,#11ABB0); */
 
     /* Full height */
     height: 100vh; 
@@ -10,6 +12,38 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    padding-top: 10vh;
+    
+}
+#header {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.phone-frame {
+    /* The image used */
+    background-image: url(../../static/images/hero-pattern-bg.png);
+    /* background-image: url(https://cdn.dribbble.com/users/159888/screenshots/3175882/santa_claws.png); */
+    background-color: rgba(0, 0, 0, 0.05);
+
+    /* Full height */
+    height: 95vh; 
+    width: 100vw;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: solid white;
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(0,0,0,.5);
+}
+.phone-top {
+    border: 2px solid white;
+    width: 20%;
+    margin: auto;
+    margin-top: 5vh;
 }
 #header .responsive-headline{
     color: white;
@@ -20,10 +54,14 @@
     border-color: rgba(180, 180, 180, .4);
 }
 #header p {
-    color: #CACACA;;
+    color: #ffffff;
 }
 
 @media only screen and (min-width: 0px) {
+    #header {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
     #header p {
         font-size: 10px;
     }
@@ -33,6 +71,10 @@
 }
 
 @media only screen and (min-width: 600px) {
+    #header {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
     #header p {
         font-size: 12px;
     }
@@ -42,6 +84,10 @@
 }
 
 @media only screen and (min-width: 960px) {
+    #header {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
     #header p {
         font-size: 15px;
     }
@@ -51,6 +97,10 @@
 }
 
 @media only screen and (min-width: 1280px) {
+    #header {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
     #header p {
         font-size: 20px;
     }

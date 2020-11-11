@@ -1,6 +1,6 @@
 #contact {
   /* The image used */
-  background: rgb(92, 92, 92) url(../../static/images/background2.png) no-repeat right bottom;
+  background: rgb(100, 100, 100) url(../../static/images/background2.png) no-repeat right bottom;
   background-size: cover;
 
   overflow: hidden;
@@ -14,6 +14,14 @@
   background-repeat: no-repeat;
   background-size: cover; */
   color: white;
+  padding-left: 0;
+  padding-right: 0;
+}
+.contact-mask {
+  width: 100vw;
+  height: 10vh;
+  background: rgb(100, 100, 100) url(../../static/images/contact-white-mask.svg) no-repeat right top;
+  background-size: cover;
 }
 
 #contact .card {
@@ -128,7 +136,16 @@ a {
   color: #F06000;
 }
 
+@media only screen and (max-width: 0px) {
+  .contact-mask {
+    height: 10vh;
+  }
+}
+
 @media only screen and (max-width: 480px) {
+  .contact-mask {
+    height: 12vh;
+  }
   #contact .card {
     width: 450px;
     height: 500px;
@@ -156,5 +173,23 @@ a {
     bottom: 0;
 
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contact-mask {
+    height: 15vh;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .contact-mask {
+    height: 20vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .contact-mask {
+    height: 30vh;
   }
 }

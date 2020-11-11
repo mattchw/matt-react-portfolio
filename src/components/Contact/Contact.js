@@ -61,11 +61,12 @@ function Contact(props) {
 
   return (
     <Container id="contact" maxWidth='xl' className="footer">
+      <div className="contact-mask"/>
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid container justify="center">
           <Grid item>
             <Link to="header" spy={true} smooth={true} duration={1000}>
-              <IconButton aria-label="find out more">
+              <IconButton aria-label="find out more" style={{color: 'white'}}>
                 <KeyboardArrowUpIcon fontSize="large" />
               </IconButton>
             </Link>
@@ -111,7 +112,7 @@ function Contact(props) {
           </div>
         </Grid>
         <Grid item style={{ paddingTop: 20, width: '75%' }}>
-          <h5>Have a question or want to work together?</h5>
+          <h4>Have a question or want to work together?</h4>
           <form onSubmit={handleSubmit}>
             <div>
               <TextField

@@ -125,6 +125,8 @@ const data = {
           "years":"June 2020 – Present",
           "description":[
             "Rebuild the real estate and property system with Nodejs, Redis, Oracle Database, ElasticSearch and deploy it on AWS EC2",
+            "Performed load testing to improve and increase frequently used APIs’ performance by 50%",
+            "Maintained and supported daily issues of SMPP applications",
             ]
         },
         {

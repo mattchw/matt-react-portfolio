@@ -44,9 +44,9 @@ function About(props) {
         <Grid item md={7} container direction="column" justify="center" alignItems="center" >
           <Slide bottom cascade>
             <Grid item>
-              <h3>
+              <h2>
                 About me
-            </h3>
+              </h2>
             </Grid>
           </Slide>
           <Slide bottom cascade>

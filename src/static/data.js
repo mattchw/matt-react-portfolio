@@ -203,16 +203,22 @@ const data = {
     "portfolio":{
       "projects": [
         {
+          "title":"UKChat",
+          "category":"Slack-like React application with Firebase for Hongkongers to talk about UK topics in an organized way",
+          "image":"UKChat.png",
+          "url":"https://uk-chatroom.web.app/"
+        },
+        {
           "title":"Killer Queue",
           "category":"MERN stack application for shop/restaurant to organise queueing effectively",
           "image":"KillerQueue.png",
           "url":"https://github.com/mattchw/Killer-Queue"
         },
         {
-          "title":"BeWater Guide",
-          "category":"React/Redux web application with Spring Boot server showing celebrities’ political stances",
-          "image":"BeWaterGuide.png",
-          "url":"https://github.com/mattchw/BeWater-Guide"
+          "title":"Polipedia",
+          "category":"React/Redux web application with Spring Boot server showing political stances and background of celebrities in HK and US",
+          "image":"Polipedia.png",
+          "url":"https://github.com/mattchw/Polipedia"
         },
         {
           "title":"Buy2Play",

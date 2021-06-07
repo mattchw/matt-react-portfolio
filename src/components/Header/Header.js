@@ -20,6 +20,14 @@ function Header(props) {
     <Container maxWidth='xl' className="header" id="header">
       <div className="phone-frame">
         <div className="phone-top"/>
+        <div className="phone-screen">
+          <img src={require('../../static/images/shooting-star.png')} className="shooting-star" alt=""/>
+          <img src={require('../../static/images/shooting-star.png')} className="shooting-star-2" alt=""/>
+          <img src={require('../../static/images/shooting-star.png')} className="shooting-star-3" alt=""/>
+          <div className="header-object-container">
+            <img src={require('../../static/images/header-object.png')} className="header-object-img" alt=""/>
+          </div>
+        </div>
       </div>
       <Grid container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid item>

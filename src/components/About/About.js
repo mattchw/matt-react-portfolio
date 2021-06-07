@@ -35,11 +35,9 @@ function About(props) {
     <Container maxWidth='xl' className="about">
       <Grid item xs sm={11} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item md={5} style={{ margin: 'auto 0' }}>
-          <Slide bottom>
-            <div className="about-img-circle">
-              <img className="about-img" src={profilepic} alt={props.data.name} />
-            </div>
-          </Slide>
+          <div className="about-img-circle">
+            <img className="about-img" src={profilepic} alt={props.data.name} />
+          </div>
         </Grid>
         <Grid item md={7} container direction="column" justify="center" alignItems="center" >
           <Slide bottom cascade>

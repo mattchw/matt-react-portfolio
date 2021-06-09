@@ -78,50 +78,6 @@
     50% { transform: translate(-4px, -4px) rotate(-5deg); }
     100% { transform: translate(4px, 4px) rotate(5deg); }
 }
-
-.shooting-star {
-    position: absolute;
-    width: 10%;
-    top: 0;
-    right: 0;
-
-    opacity: 0.5;
-
-    animation: shooting 8s;
-    animation-iteration-count: infinite; 
-}
-
-.shooting-star-2 {
-    position: absolute;
-    width: 15%;
-    top: 0;
-    right: 40vw;
-
-    opacity: 0.6;
-
-    animation: shooting 5s;
-    animation-iteration-count: infinite; 
-}
-
-.shooting-star-3 {
-    position: absolute;
-    width: 20%;
-    top: 0;
-    right: 20vw;
-
-    opacity: 0.3;
-
-    animation: shooting 3s;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes shooting {
-    0% {transform: translate(0px, 0px);}
-
-    10% {transform: translate(-100vw, 120vh);}
-    
-    100% {transform: translate(-100vw, 120vh);}
-  }
   
 #header .responsive-headline{
     color: white;

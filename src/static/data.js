@@ -6,7 +6,7 @@ const data = {
       "name":"Matt Wong",
       "occupation":"Backend Developer",
       // header description
-      "description":"I design and code beautifully simple things, and I love what I do.",
+      "description":"I code and explore new technologies, and I love what I do.",
       // logo displayed in contact section
       "logo": "logo.png",
       // primary profile picture displayed in about section

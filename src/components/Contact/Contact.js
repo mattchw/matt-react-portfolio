@@ -85,7 +85,7 @@ function Contact(props) {
                 </div>
 
                 <div className="cardName">
-                  <FontAwesomeIcon style={{ margin: "0 5" }} icon={faUser} />
+                  <FontAwesomeIcon style={{ paddingRight: 5 }} icon={faUser} />
                   <span>{name}</span>
                 </div>
 
@@ -96,11 +96,11 @@ function Contact(props) {
               <Grid className={classes.smallFont}>
                 <p className="address" style={{ color: '#525252' }}>
                   <span>
-                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faMapMarkerAlt} />
+                    <FontAwesomeIcon style={{ paddingRight: 5 }} icon={faMapMarkerAlt} />
                     {city}
                   </span><br />
                   <Button size="small" href={"mailto:" + email} className={classes.smallFont}>
-                    <FontAwesomeIcon style={{ margin: "0 5" }} icon={faEnvelope} />
+                    <FontAwesomeIcon style={{ paddingRight: 5 }} icon={faEnvelope} />
                     {email}
                   </Button>
                 </p>

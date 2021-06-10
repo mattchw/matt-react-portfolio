@@ -59,7 +59,7 @@ function Resume(props) {
 
   var front = props.data.techs.front.map(function (techs) {
     let techsImg = require('../../static/images/techs/front/'+ techs.img);
-    return <Accordion key={techs.name}>
+    return <Accordion key={techs.name} style={{marginBottom: 10}}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -68,7 +68,7 @@ function Resume(props) {
         <Grid item xs={3}>
           <Avatar alt={techs.name} src={techsImg} style={{margin: '0 auto'}}/>
         </Grid>
-        <Grid item xs={9} style={{padding: '0 10px'}}>
+        <Grid item xs={9} style={{padding: 10}}>
           {techs.name}
         </Grid>
       </AccordionSummary>
@@ -81,7 +81,7 @@ function Resume(props) {
   })
   var back = props.data.techs.back.map(function (techs) {
     let techsImg = require('../../static/images/techs/back/'+ techs.img);
-    return <Accordion key={techs.name}>
+    return <Accordion key={techs.name} style={{marginBottom: 10}}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -90,7 +90,7 @@ function Resume(props) {
         <Grid item xs={3}>
           <Avatar alt={techs.name} src={techsImg} style={{margin: '0 auto'}}/>
         </Grid>
-        <Grid item xs={9} style={{padding: '0 10px'}}>
+        <Grid item xs={9} style={{padding: 10}}>
           {techs.name}
         </Grid>
       </AccordionSummary>

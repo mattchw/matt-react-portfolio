@@ -13,9 +13,14 @@ import Container from '@material-ui/core/Container';
 
 import Slide from 'react-reveal/Slide';
 
+// redux
+import { useSelector } from 'react-redux';
+import { getTheme } from '../../reducers/themeReducer';
+
 const useStyles = styles;
 
 function About(props) {
+  const theme = useSelector(getTheme);
   const classes = useStyles();
 
   const profilepic = require('../../static/images/profilepic/'+ props.data.primaryImg);
@@ -32,7 +37,7 @@ function About(props) {
   })
 
   return (
-    <Container maxWidth='xl' className="about">
+    <Container maxWidth='xl' className={`about ${theme}`}>
       <Grid item xs sm={11} container direction="row" justify="center" alignItems="flex-start" className={classes.containerItem}>
         <Grid item md={5} style={{ margin: 'auto 0' }}>
           <div className="about-img-circle">

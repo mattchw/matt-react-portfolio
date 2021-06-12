@@ -25,4 +25,8 @@ export default makeStyles(theme => ({
 	resumeRightInfoName: {
 		textAlign: 'center'
 	},
+	resumeAccordionDark: {
+		backgroundColor: '#424242',
+		color: 'white'
+	}
 }));

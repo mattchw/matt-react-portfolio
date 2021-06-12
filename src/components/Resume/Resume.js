@@ -16,16 +16,20 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Avatar from '@material-ui/core/Avatar';
 
-
 import Fade from 'react-reveal/Fade';
+
+// redux
+import { useSelector } from 'react-redux';
+import { getTheme } from '../../reducers/themeReducer';
 
 const useStyles = styles;
 
 function Resume(props) {
+  const theme = useSelector(getTheme);
   const classes = useStyles();
-  const theme = useTheme();
+  const muiTheme = useTheme();
 
-  const smMedia = useMediaQuery(theme.breakpoints.up('sm'));
+  const smMedia = useMediaQuery(muiTheme.breakpoints.up('sm'));
 
   var skillmessage = props.data.skillmessage;
 
@@ -59,9 +63,16 @@ function Resume(props) {
 
   var front = props.data.techs.front.map(function (techs) {
     let techsImg = require('../../static/images/techs/front/'+ techs.img);
-    return <Accordion key={techs.name}>
+    return <Accordion key={techs.name} style={theme === 'dark' ? 
+    {
+      backgroundColor: '#424242',
+		  color: 'white'
+    }: null}>
       <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
+        expandIcon={<ExpandMoreIcon style={theme === 'dark' ? 
+        {
+          color: 'white'
+        }: null}/>}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
@@ -81,9 +92,16 @@ function Resume(props) {
   })
   var back = props.data.techs.back.map(function (techs) {
     let techsImg = require('../../static/images/techs/back/'+ techs.img);
-    return <Accordion key={techs.name}>
+    return <Accordion key={techs.name} style={theme === 'dark' ? 
+    {
+      backgroundColor: '#424242',
+		  color: 'white'
+    }: null}>
       <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
+        expandIcon={<ExpandMoreIcon style={theme === 'dark' ? 
+        {
+          color: 'white'
+        }: null}/>}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >

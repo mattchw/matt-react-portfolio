@@ -21,6 +21,11 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './themes';
 import { GlobalStyles } from './themes/global';
 
+// redux
+import { useDispatch, useSelector } from 'react-redux';
+import { getTheme } from './reducers/themeReducer';
+import { themeActions } from './actions/themeAction';
+
 const getDimensions = ele => {
   const { height } = ele.getBoundingClientRect();
   const offsetTop = ele.offsetTop;
@@ -41,11 +46,12 @@ const scrollTo = ele => {
 };
 
 function App() {
+  const dispatch = useDispatch();
   const [visibleSection, setVisibleSection] = useState("Home");
   const [mobileNav, setMobileNav] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
-  const [theme, setTheme] = useState('light');
+  const theme = useSelector(getTheme);
 
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
@@ -110,10 +116,10 @@ function App() {
   const toggleTheme = () => {
     // if the theme is not light, then set it to dark
     if (theme === 'light') {
-      setTheme('dark');
+      dispatch(themeActions.updateTheme('dark'))
     // otherwise, it should be light
     } else {
-      setTheme('light');
+      dispatch(themeActions.updateTheme('light'))
     }
   }
 

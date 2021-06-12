@@ -12,20 +12,14 @@ import Resume from './components/Resume/Resume'
 import Projects from './components/Projects/Projects'
 import Blogs from './components/Blogs/Blogs'
 import Contact from './components/Contact/Contact'
+import Icon from '@material-ui/core/Icon';
 
 import { stack as Menu } from 'react-burger-menu'
 import Hidden from '@material-ui/core/Hidden';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#025f89'
-    }
-  }
-});
-
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './themes';
+import { GlobalStyles } from './themes/global';
 
 const getDimensions = ele => {
   const { height } = ele.getBoundingClientRect();
@@ -50,6 +44,8 @@ function App() {
   const [visibleSection, setVisibleSection] = useState("Home");
   const [mobileNav, setMobileNav] = useState(false);
   const [showNav, setShowNav] = useState(false);
+
+  const [theme, setTheme] = useState('light');
 
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
@@ -111,8 +107,22 @@ function App() {
     };
   }, [visibleSection, sectionRefs]);
 
+  const toggleTheme = () => {
+    // if the theme is not light, then set it to dark
+    if (theme === 'light') {
+      setTheme('dark');
+    // otherwise, it should be light
+    } else {
+      setTheme('light');
+    }
+  }
+
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyles/>
+      <div className="theme-button" onClick={toggleTheme}>
+        {theme === 'light' ? <Icon className="fas fa-moon" fontSize="small"/> : <Icon className="fas fa-sun" fontSize="small"/>}
+      </div>
       <div className="App">
         <Hidden smDown>
           <div className={`sticky ${showNav ? "show" : "hide"}`}>
@@ -235,7 +245,6 @@ function App() {
               Contact
             </button>
           </Menu>
-
         </Hidden>
         <div id="Header" ref={headerRef}>
           <Header data={data.main} />
@@ -256,7 +265,7 @@ function App() {
           <Contact data={data.main} />
         </div>
       </div>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 }
 

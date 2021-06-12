@@ -59,7 +59,7 @@ function Resume(props) {
 
   var front = props.data.techs.front.map(function (techs) {
     let techsImg = require('../../static/images/techs/front/'+ techs.img);
-    return <Accordion key={techs.name} style={{marginBottom: 10}}>
+    return <Accordion key={techs.name}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -81,7 +81,7 @@ function Resume(props) {
   })
   var back = props.data.techs.back.map(function (techs) {
     let techsImg = require('../../static/images/techs/back/'+ techs.img);
-    return <Accordion key={techs.name} style={{marginBottom: 10}}>
+    return <Accordion key={techs.name}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
@@ -161,7 +161,9 @@ function Resume(props) {
             </Grid>
             <Grid item xs className={classes.resumeRightInfo}>
               <Fade bottom cascade>
-                {front}
+                <div style={{width: '100%'}}>
+                  {front}
+                </div>
               </Fade>
             </Grid>
             <Grid item>
@@ -173,7 +175,9 @@ function Resume(props) {
             </Grid>
             <Grid item xs className={classes.resumeRightInfo}>
               <Fade bottom cascade>
-                {back}
+                <div style={{width: '100%'}}>
+                  {back}
+                </div>
               </Fade>
             </Grid>
           </Grid>

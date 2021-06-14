@@ -65,7 +65,7 @@ function Resume(props) {
     let techsImg = require('../../static/images/techs/front/'+ techs.img);
     return <Accordion key={techs.name} style={theme === 'dark' ? 
     {
-      backgroundColor: '#424242',
+      backgroundColor: '#333',
 		  color: 'white'
     }: null}>
       <AccordionSummary

@@ -1,8 +1,6 @@
-.header {
+.header-light {
     /* The image used */
-    background-image: url(../../static/images/header-background.svg);
-    /* background-image: url(https://cdn.dribbble.com/users/159888/screenshots/3175882/santa_claws.png);
-    background-image: linear-gradient(to top right,#1136b0,#115bb0,#11ABB0); */
+    background-image: white;
 
     /* Full height */
     height: 100vh; 
@@ -14,12 +12,39 @@
     background-size: cover;
 
     padding-top: 10vh;
-    
+    transition: all 0.5s linear;
 }
+
+.header {
+    /* The image used */
+    background-image: url(../../static/images/header-background.svg);
+
+    /* Full height */
+    height: 100vh; 
+    width: 100vw;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 10vh;
+    transition: all 0.5s linear;
+}
+
 #header {
     padding-left: 10vw;
     padding-right: 10vw;
 }
+
+#header .responsive-headline {
+    color: white;
+}
+
+#header p {
+    color: white;
+}
+
 .phone-frame {
     /* The image used */
     /* background-image: url(../../static/images/hero-pattern-bg.png); */

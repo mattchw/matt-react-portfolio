@@ -12,7 +12,7 @@
 }
 
 .dark {
-  background: #363537 url(../../static/images/background.png) no-repeat right top;
+  background: #212121 url(../../static/images/background.png) no-repeat right top;
   background-size: cover;
   color: #FAFAFA;
   transition: all 0.5s linear;

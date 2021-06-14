@@ -14,9 +14,14 @@ import TextField from '@material-ui/core/TextField';
 
 import { Link } from 'react-scroll';
 
+// redux
+import { useSelector } from 'react-redux';
+import { getTheme } from '../../reducers/themeReducer';
+
 const useStyles = styles;
 
 function Contact(props) {
+  const theme = useSelector(getTheme);
   const classes = useStyles();
   const [values, setValues] = React.useState({
     "form-name": 'mattwong.info',
@@ -60,8 +65,8 @@ function Contact(props) {
   };
 
   return (
-    <Container id="contact" maxWidth='xl' className="footer">
-      <div className="contact-mask"/>
+    <Container id="contact" maxWidth='xl' className={`contact-${theme}`}>
+      {/* <div id="contact-mask" className={`contact-mask-${theme}`}/> */}
       <Grid item xs sm={10} container direction="column" justify="center" alignItems="center" className={classes.containerItem}>
         <Grid container justify="center">
           <Grid item>
@@ -72,7 +77,7 @@ function Contact(props) {
             </Link>
           </Grid>
         </Grid>
-        <Grid item>
+        <Grid item className="contact-header">
           <h1>Contact</h1>
         </Grid>
         <Grid item container >

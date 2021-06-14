@@ -1,27 +1,44 @@
 #contact {
-  /* The image used */
-  background: rgb(100, 100, 100) url(../../static/images/background2.png) no-repeat right bottom;
-  background-size: cover;
-
   overflow: hidden;
 
-  /* Full height */
-  /* height: 100vh; 
-  width: 100vw; */
-
-  /* Center and scale the image nicely */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  color: white;
   padding-left: 0;
   padding-right: 0;
 }
-.contact-mask {
-  width: 100vw;
-  height: 10vh;
-  background: rgb(100, 100, 100) url(../../static/images/contact-white-mask.svg) no-repeat right top;
+
+.contact-light {
+  background: rgb(100, 100, 100) url(../../static/images/background2.png) no-repeat right bottom;
   background-size: cover;
+  color: white;
+  transition: all 0.5s linear;
+}
+
+.contact-dark {
+  background: #333 url(../../static/images/background2.png) no-repeat right bottom;
+  background-size: cover;
+  color: #FAFAFA;
+  transition: all 0.5s linear;
+}
+
+#contact-mask {
+  position: absolute;
+  width: 100vw;
+  height: 40vh;
+}
+
+.contact-mask-light {
+  background: rgb(100, 100, 100) url(../../static/images/contact-white-mask.svg) no-repeat right top;
+  background-size: contain;
+  transition: all 0.5s linear;
+}
+
+.contact-mask-dark {
+  background: #333 url(../../static/images/contact-dark-mask.svg) no-repeat right top;
+  background-size: contain;
+  transition: all 0.5s linear;
+}
+
+.contact-header {
+  z-index: 100;
 }
 
 #contact .card {

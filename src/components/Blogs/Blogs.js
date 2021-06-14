@@ -10,9 +10,14 @@ import Button from '@material-ui/core/Button';
 
 import Fade from 'react-reveal/Fade';
 
+// redux
+import { useSelector } from 'react-redux';
+import { getTheme } from '../../reducers/themeReducer';
+
 const useStyles = styles;
 
 function Blogs(props) {
+  const theme = useSelector(getTheme);
   const classes = useStyles();
 
   const [data, setData] = useState([]);
@@ -56,7 +61,14 @@ function Blogs(props) {
                   <hr/>
                   <p>{item.pubDate.slice(0,10)}</p>
                   {item.categories.slice(0,3).map((category)=>(
-                    <Chip key={category} label={category} style={{margin: 3}}/>
+                    <Chip key={category} label={category} style={theme === 'dark' ? 
+                    {
+                      backgroundColor: '#333',
+                      color: 'white', 
+                      margin: 3
+                    } : {
+                      margin: 3
+                    }}/>
                   ))}
                 </a>
             </Grid>
@@ -64,7 +76,14 @@ function Blogs(props) {
           )}
         </Grid>
         <Grid item container direction="row" justify="center" alignItems="center">
-          <Button size="large" variant="contained" href={blog} className={classes.smallFont} style={{fontWeight: 'bold'}}>
+          <Button size="large" variant="contained" href={blog} className={classes.smallFont} style={theme === 'dark' ? 
+          {
+            backgroundColor: '#333',
+            color: 'white', 
+            fontWeight: 'bold'
+          } : {
+            fontWeight: 'bold'
+          }}>
             More
           </Button>
         </Grid>

@@ -12,6 +12,7 @@ import Resume from './components/Resume/Resume'
 import Projects from './components/Projects/Projects'
 import Blogs from './components/Blogs/Blogs'
 import Contact from './components/Contact/Contact'
+import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 import Icon from '@material-ui/core/Icon';
 
 import { stack as Menu } from 'react-burger-menu'
@@ -50,6 +51,7 @@ function App() {
   const [visibleSection, setVisibleSection] = useState("Home");
   const [mobileNav, setMobileNav] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const theme = useSelector(getTheme);
 
@@ -108,6 +110,8 @@ function App() {
 
     handleScroll();
     window.addEventListener("scroll", handleScroll);
+
+    setLoading(false);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -126,6 +130,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles/>
+      {loading && <LoadingScreen />}
       <div className="theme-button" onClick={toggleTheme}>
         {theme === 'light' ? <Icon className="fas fa-moon" fontSize="small"/> : <Icon className="fas fa-sun" fontSize="small"/>}
       </div>

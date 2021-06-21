@@ -24,7 +24,7 @@ function Blogs(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@matthew.chohin')
+      await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mattchw')
         .then((res) => res.json())
         .then((data) => {
           // Fillter the array

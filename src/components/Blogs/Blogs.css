@@ -98,7 +98,7 @@
 
 #blogs .image {
   object-fit: cover;
-  width: 100%;
+  width: 100vw;
   height: 250px;
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
   /* border-radius: 15px; */

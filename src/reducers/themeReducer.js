@@ -3,7 +3,7 @@ import {
 } from '../actions/themeAction';
 
 const initialState = {
-  theme: 'light'
+  theme: 'dark'
 };
 
 export function themeReducer(state = initialState, action) {

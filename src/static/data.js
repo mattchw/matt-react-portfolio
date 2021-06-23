@@ -26,7 +26,8 @@ const data = {
         "zip": "(Your Zip/Postal Code)"
       },
       "website": "https://mattwong.info",
-      "blog": "https://medium.com/@matthew.chohin",
+      "blog": "https://medium.com/@mattchw",
+      "blog_api": "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mattchw",
       // social network
       "social":[
         {

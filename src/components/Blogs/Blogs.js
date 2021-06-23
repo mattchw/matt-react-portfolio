@@ -24,7 +24,7 @@ function Blogs(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mattchw')
+      await fetch(props.data.blog_api)
         .then((res) => res.json())
         .then((data) => {
           // Fillter the array
@@ -36,7 +36,7 @@ function Blogs(props) {
     };
 
     fetchData();
-  }, []);
+  }, [props.data.blog_api]);
 
   if (props.data) {
     var blog = props.data.blog;
@@ -52,7 +52,7 @@ function Blogs(props) {
           </Fade>
         </Grid>
 
-        <Grid item container direction="row" justify="flex-start" alignItems="flex-start">
+        <Grid item container direction="row" justify="flex-start" alignItems="flex-start" style={{paddingBottom: 30}}>
           {data && data.slice(0,8).map((item) => (
             <Grid item md={6} lg={3} key={item.title} style={{ padding: 10 }}>
                 <a href={item.link} title={item.title}>
